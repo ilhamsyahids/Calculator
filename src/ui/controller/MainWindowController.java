@@ -97,14 +97,13 @@ public class MainWindowController {
     private class AnsBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-
         }
     }
 
     private class DotBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            numField.setText(numField.getText() + '.');
         }
     }
 
@@ -125,63 +124,67 @@ public class MainWindowController {
     private class ThreeBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            numField.setText(numField.getText() + '3');
         }
     }
 
     private class FourBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            numField.setText(numField.getText() + '4');
         }
     }
 
     private class FiveBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            numField.setText(numField.getText() + '5');
         }
     }
 
     private class SixBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            numField.setText(numField.getText() + '6');
         }
     }
 
     private class SevenBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            numField.setText(numField.getText() + '7');
         }
     }
 
     private class EightBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            numField.setText(numField.getText() + '8');
         }
     }
 
     private class NineBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            numField.setText(numField.getText() + '9');
         }
     }
 
     private class ZeroBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
+            System.out.println(numField.getText());
 
+            if (!numField.getText().equals("0")) {
+                numField.setText(numField.getText() + '0');
+            }
         }
     }
 
     private class ClearBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            numField.setText("");
         }
     }
 
@@ -209,35 +212,35 @@ public class MainWindowController {
     private class MulBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            numField.setText(numField.getText() + 'x');
         }
     }
 
     private class DivBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            numField.setText(numField.getText() + ':');
         }
     }
 
     private class PlusBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            numField.setText(numField.getText() + '+');
         }
     }
 
     private class MinBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            numField.setText(numField.getText() + '-');
         }
     }
 
     private class SquareBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            numField.setText(numField.getText() + '√');
         }
     }
 }

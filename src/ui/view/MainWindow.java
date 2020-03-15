@@ -30,7 +30,7 @@ public class MainWindow extends JFrame{
     private JPanel mainPanel;
 
     public MainWindow() {
-        setSize(500, 500);
+        setSize(350, 400);
         setContentPane(mainPanel);
         setLocationRelativeTo(null);
         setResizable(false);

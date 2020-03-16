@@ -240,7 +240,7 @@ public class MainWindowController {
     private class SquareBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            numField.setText(numField.getText() + '√');
+            numField.setText(numField.getText() + "√");
         }
     }
 }

@@ -1,13 +1,11 @@
 package expression;
 
-public class SqrtExpression implements Expression {
-	protected Expression x;
-
+public class SqrtExpression extends UnaryExpression{
 	public SqrtExpression(Expression x){
-    	this.x = x;
+    	super(x);
   	}
 
-  	public double solve(){
-    	return 0.5 * this.x.solve();
+  	public Double solve(){
+    	return Math.sqrt(this.x.solve());
   	}
 }

@@ -1,14 +1,11 @@
 package expression;
 
 public class AddExpression extends BinaryExpression {
-	protected Expression x;
-	protected Expression y;
-
 	public AddExpression(Expression x, Expression y){
 		super(x, y);
 	}
 
-	public double solve(){
+	public Double solve(){
 		return this.x.solve() + this.y.solve();
 	}
 }

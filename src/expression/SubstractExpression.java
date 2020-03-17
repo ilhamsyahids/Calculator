@@ -1,15 +1,11 @@
 package expression;
 
-public class SubstractExpression implements Expression {
-	protected Expression x;
-	protected Expression y;
-
+public class SubstractExpression extends BinaryExpression {
 	public SubstractExpression(Expression x, Expression y){
-		this.x = x;
-		this.y = y;
+		super(x, y);
 	}
 
-	public double solve(){
+	public Double solve(){
 		return this.x.solve() - this.y.solve();
 	}
 }

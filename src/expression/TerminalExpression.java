@@ -1,3 +1,5 @@
+package expression;
+
 public class TerminalExpression implements Expression{
  	protected double x;
   	

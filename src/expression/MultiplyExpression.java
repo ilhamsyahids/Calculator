@@ -1,3 +1,5 @@
+package expression;
+
 public class MultiplyExpression extends BinaryExpression {
 	protected Expression x;
 	protected Expression y;

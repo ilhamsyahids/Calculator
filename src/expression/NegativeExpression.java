@@ -1,3 +1,5 @@
+package expression;
+
 public class NegativeExpression extends UnaryExpression {
 	protected Expression x;
 

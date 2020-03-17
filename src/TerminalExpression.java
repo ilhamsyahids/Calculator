@@ -1,4 +1,4 @@
-class TerminalExpression implements Expression{
+public class TerminalExpression implements Expression{
  	protected double x;
   	
   	public TerminalExpression(double x){

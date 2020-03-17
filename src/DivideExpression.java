@@ -1,10 +1,9 @@
-class DivideExpression implements Expression {
+public class DivideExpression extends BinaryExpression {
 	protected Expression x;
 	protected Expression y;
 
 	public DivideExpression(Expression x, Expression y){
-		this.x = x;
-		this.y = y;
+		super(x, y);
 	}
 
 	public double solve(){

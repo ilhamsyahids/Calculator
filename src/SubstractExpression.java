@@ -1,8 +1,8 @@
-class SubExpression implements Expression {
+public class SubstractExpression implements Expression {
 	protected Expression x;
 	protected Expression y;
 
-	public SubExpression(Expression x, Expression y){
+	public SubstractExpression(Expression x, Expression y){
 		this.x = x;
 		this.y = y;
 	}

@@ -1,10 +1,9 @@
-class AddExpression implements Expression {
+public class AddExpression extends BinaryExpression {
 	protected Expression x;
 	protected Expression y;
 
 	public AddExpression(Expression x, Expression y){
-		this.x = x;
-		this.y = y;
+		super(x, y);
 	}
 
 	public double solve(){

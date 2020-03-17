@@ -1,4 +1,4 @@
-class SqrtExpression implements Expression {
+public class SqrtExpression implements Expression {
 	protected Expression x;
 
 	public SqrtExpression(Expression x){

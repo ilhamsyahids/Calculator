@@ -1,10 +1,9 @@
-class MultiplyExpression implements Expression {
+public class MultiplyExpression extends BinaryExpression {
 	protected Expression x;
 	protected Expression y;
 
 	public MultiplyExpression(Expression x, Expression y){
-		this.x = x;
-		this.y = y;
+		super(x, y);
 	}
 
 	public double solve(){

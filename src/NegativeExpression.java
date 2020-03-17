@@ -1,8 +1,8 @@
-class NegativeExpression implements Expression {
+public class NegativeExpression extends UnaryExpression {
 	protected Expression x;
 
 	public NegativeExpression(Expression x){
-    	this.x = x;
+    	super(x);
   	}
 
   	public double solve(){

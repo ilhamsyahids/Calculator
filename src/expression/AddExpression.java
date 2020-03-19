@@ -31,6 +31,6 @@ public class AddExpression extends BinaryExpression {
 	 * @return hasil penjumlahan dari Expression x dengan Expression y
 	 */
 	public Double solve(){
-		return Add(this.x.solve() + this.y.solve());
+		return Add(this.x.solve(), this.y.solve());
 	}
 }

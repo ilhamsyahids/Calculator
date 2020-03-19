@@ -9,7 +9,7 @@ public class NegativeExpression extends UnaryExpression {
 		return -1 * x;
 	}
 
-  	public double solve(){
-    	return Negative(-1 * this.x.solve());
+  	public Double solve(){
+    	return Negative(this.x.solve());
   	}
 }

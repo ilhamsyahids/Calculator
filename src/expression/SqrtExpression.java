@@ -10,6 +10,6 @@ public class SqrtExpression extends UnaryExpression{
 	}
 
   	public Double solve(){
-    	return Sqrt(Math.sqrt(this.x.solve()));
+    	return Sqrt(this.x.solve());
   	}
 }

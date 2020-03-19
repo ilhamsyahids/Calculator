@@ -31,6 +31,6 @@ public class MultiplyExpression extends BinaryExpression {
 	 * @return hasil perkalian dari Expression x dengan Expression y
 	 */
 	public Double solve(){
-		return Multiply(this.x.solve() * this.y.solve());
+		return Multiply(this.x.solve(), this.y.solve());
 	}
 }

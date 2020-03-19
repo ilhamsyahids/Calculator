@@ -10,6 +10,6 @@ public class DivideExpression extends BinaryExpression {
 	}
 
 	public Double solve(){
-		return Divide(this.x.solve() / this.y.solve());
+		return Divide(this.x.solve(), this.y.solve());
 	}
 }

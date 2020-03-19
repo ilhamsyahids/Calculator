@@ -10,6 +10,6 @@ public class SubstractExpression extends BinaryExpression {
 	}
 
 	public Double solve(){
-		return Substract(this.x.solve() - this.y.solve());
+		return Substract(this.x.solve(), this.y.solve());
 	}
 }

@@ -5,7 +5,7 @@ public class DivideExpression extends BinaryExpression {
 		super(x, y);
 	}
 
-	public Double solve(){
+	public double solve(){
 		return this.x.solve() / this.y.solve();
 	}
 }

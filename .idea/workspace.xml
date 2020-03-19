@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="517d2a46-0011-433b-aed4-c45669c1524d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/expression/AddExpressionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/Calculator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parsing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parsing.java" afterDir="false" />
+>>>>>>> 26b8514a1f49a8c85b2f07812157427b05877556
       <change beforePath="$PROJECT_DIR$/src/expression/AddExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/AddExpression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/expression/BinaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/BinaryExpression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/expression/DivideExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/DivideExpression.java" afterDir="false" />
@@ -16,15 +22,19 @@
       <change beforePath="$PROJECT_DIR$/src/expression/SubstractExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/SubstractExpression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/expression/TerminalExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/TerminalExpression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/expression/UnaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/UnaryExpression.java" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/ui/controller/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/MainWindowController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/view/MainWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/view/MainWindow.form" afterDir="false" />
 >>>>>>> 94955e9a1a9f8d78063b16236b5d3529ccb68064
+=======
+>>>>>>> 26b8514a1f49a8c85b2f07812157427b05877556
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   <component name="FileEditorManager">
@@ -160,10 +170,13 @@
     </leaf>
   </component>
 >>>>>>> 94955e9a1a9f8d78063b16236b5d3529ccb68064
+=======
+>>>>>>> 26b8514a1f49a8c85b2f07812157427b05877556
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -178,6 +191,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
 <<<<<<< HEAD
   <component name="ProjectId" id="1ZF03uhIwNPaoJA80eZ3yvf3ITq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -277,22 +291,69 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+=======
+  <component name="ProjectId" id="1ZKiuBhdKSmKQNfk8lmgUTGTlO8" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+>>>>>>> 26b8514a1f49a8c85b2f07812157427b05877556
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE" value="left" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="212" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584475731930" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.EditorConfig" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="expression" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/ui/view" />
     </key>
   </component>
+<<<<<<< HEAD
   <component name="RunManager">
+=======
+  <component name="RunManager" selected="JUnit.AddExpressionTest">
+    <configuration name="AddExpressionTest.solve" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="expression.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="expression" />
+      <option name="MAIN_CLASS_NAME" value="expression.AddExpressionTest" />
+      <option name="METHOD_NAME" value="solve" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+>>>>>>> 26b8514a1f49a8c85b2f07812157427b05877556
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Calculator" />
@@ -303,8 +364,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AddExpressionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="expression.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="expression" />
+      <option name="MAIN_CLASS_NAME" value="expression.AddExpressionTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddExpressionTest.solve" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="expression.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="expression" />
+      <option name="MAIN_CLASS_NAME" value="expression.AddExpressionTest" />
+      <option name="METHOD_NAME" value="solve" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AddExpressionTest" />
+        <item itemvalue="JUnit.AddExpressionTest.solve" />
+        <item itemvalue="Android JUnit.AddExpressionTest.solve" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -330,6 +425,7 @@
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="18886000" />
   </component>
+<<<<<<< HEAD
 <<<<<<< HEAD
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -414,13 +510,46 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout-to-restore>
   </component>
+=======
+>>>>>>> 26b8514a1f49a8c85b2f07812157427b05877556
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1237" height="142" key="GridCell.Tab.0.bottom" timestamp="1584601446082">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="142" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1584601446082" />
+    <state width="1237" height="142" key="GridCell.Tab.0.center" timestamp="1584601446082">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="142" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1584601446082" />
+    <state width="1237" height="142" key="GridCell.Tab.0.left" timestamp="1584601446082">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="142" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1584601446082" />
+    <state width="1237" height="142" key="GridCell.Tab.0.right" timestamp="1584601446082">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="142" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1584601446082" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1584599749770">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1584599749770" />
+    <state x="376" y="230" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1584599792259">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="376" y="230" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" timestamp="1584599792259" />
+    <state x="412" y="18" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1584599861802">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="412" y="18" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.680@0.0.1280.680" timestamp="1584599861802" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
+<<<<<<< HEAD
   <component name="editorHistoryManager">
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.desktop/javax/swing/JFrame.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -682,4 +811,6 @@
     </entry>
 >>>>>>> 94955e9a1a9f8d78063b16236b5d3529ccb68064
   </component>
+=======
+>>>>>>> 26b8514a1f49a8c85b2f07812157427b05877556
 </project>

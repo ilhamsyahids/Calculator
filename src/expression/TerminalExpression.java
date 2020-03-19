@@ -15,7 +15,7 @@ public class TerminalExpression implements Expression{
 		this.x = x;
 	}
 
-  	public Double solve(){
+  	public double solve(){
     	return this.x;
   	}
 }

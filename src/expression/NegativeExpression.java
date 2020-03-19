@@ -5,7 +5,7 @@ public class NegativeExpression extends UnaryExpression {
     	super(x);
   	}
 
-  	public Double solve(){
+  	public double solve(){
     	return -1 * this.x.solve();
   	}
 }

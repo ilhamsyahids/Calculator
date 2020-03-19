@@ -1,5 +1,6 @@
 package ui.controller;
 
+import expression.*;
 import ui.view.MainWindow;
 
 import javax.swing.*;
@@ -7,6 +8,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MainWindowController {
+    private static final int MAXSTRINGLABEL = 15;
+
     private MainWindow mainWindow;
     private JTextField numField;
     private JTextField errorField;
@@ -33,12 +36,21 @@ public class MainWindowController {
     private JButton btnMemR;
     private JButton btnSquare;
 
+    private TerminalExpression Exp;
+    private Double ans;
+    private boolean first;
+    private int typeExp;
+
     public MainWindowController() {
         initComponents();
         initListeners();
     }
 
     public void initComponents() {
+        typeExp = 0;
+        ans = 0.0;
+        first = true;
+        Exp = new TerminalExpression(0.0);
         mainWindow = new MainWindow();
         btnOne = mainWindow.getBtnOne();
         btnTwo = mainWindow.getBtnTwo();
@@ -63,6 +75,7 @@ public class MainWindowController {
         btnMemR = mainWindow.getBtnMemR();
         numField = mainWindow.getNumField();
         errorField = mainWindow.getErrorField();
+        label = mainWindow.getLabel();
     }
 
     private void initListeners() {
@@ -97,6 +110,8 @@ public class MainWindowController {
     private class AnsBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
+            clearError();
+            numField.setText(ans.toString());
         }
     }
 
@@ -173,8 +188,6 @@ public class MainWindowController {
     private class ZeroBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println(numField.getText());
-
             if (!numField.getText().equals("0")) {
                 numField.setText(numField.getText() + '0');
             }
@@ -185,6 +198,8 @@ public class MainWindowController {
         @Override
         public void actionPerformed(ActionEvent e) {
             numField.setText("");
+            label.setText("");
+            clearError();
         }
     }
 
@@ -205,42 +220,171 @@ public class MainWindowController {
     private class EquBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            TerminalExpression firstNum = new TerminalExpression(Double.parseDouble(numField.getText()));
+            switch (typeExp) {
+                case 1:
+                    MultiplyExpression mul = new MultiplyExpression(Exp, firstNum);
+                    Exp = new TerminalExpression(mul.solve());
+                    break;
+                case 2:
+                    DivideExpression div = new DivideExpression(Exp, firstNum);
+                    Exp = new TerminalExpression(div.solve());
+                    break;
+                case 3:
+                    AddExpression add = new AddExpression(Exp, firstNum);
+                    Exp = new TerminalExpression(add.solve());
+                    break;
+                case 4:
+                    SubstractExpression sub = new SubstractExpression (Exp, firstNum);
+                    Exp = new TerminalExpression(sub.solve());
+                    break;
+                case 5:
+                    SqrtExpression sqrt = new SqrtExpression(firstNum);
+                    Exp = new TerminalExpression(sqrt.solve());
+                    break;
+            }
+            ans = Exp.solve();
+            resetField();
+            resetAtt();
+            label.setText(ans.toString());
         }
     }
 
     private class MulBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            numField.setText(numField.getText() + 'x');
+            try {
+                if (numField.getText().length() <= 0) throw new Exception("Tidak ada angka");
+                TerminalExpression firstNum = new TerminalExpression(Double.parseDouble(numField.getText()));
+                if (first) {
+                    Exp = firstNum;
+                    first = false;
+                }
+                else {
+                    MultiplyExpression res = new MultiplyExpression(Exp, firstNum);
+                    Exp = new TerminalExpression(res.solve());
+                }
+                label.setText(Exp.getX() + " x ");
+                numField.setText("");
+                clearError();
+                typeExp = 1;
+            } catch (Exception e1) {
+                errorField.setText(e1.getMessage());
+            }
         }
     }
 
     private class DivBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            numField.setText(numField.getText() + ':');
+            try {
+                if (numField.getText().length() <= 0) throw new Exception("Tidak ada angka");
+                if (Double.parseDouble(numField.getText()) <= 0) throw new Exception("Pembilang Nol");
+                TerminalExpression firstNum = new TerminalExpression(Double.parseDouble(numField.getText()));
+                if (first) {
+                    Exp = firstNum;
+                    first = false;
+                }
+                else {
+                    DivideExpression res = new DivideExpression(Exp, firstNum);
+                    Exp = new TerminalExpression(res.solve());
+                }
+                label.setText(Exp.getX() + " : ");
+                numField.setText("");
+                clearError();
+                typeExp = 2;
+            } catch (Exception e1) {
+                errorField.setText(e1.getMessage());
+            }
         }
     }
 
     private class PlusBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            numField.setText(numField.getText() + '+');
+            try {
+                if (numField.getText().length() <= 0) throw new Exception("Tidak ada angka");
+                TerminalExpression firstNum = new TerminalExpression(Double.parseDouble(numField.getText()));
+                if (first) {
+                    Exp = firstNum;
+                    first = false;
+                }
+                else {
+                    AddExpression res = new AddExpression(Exp, firstNum);
+                    Exp = new TerminalExpression(res.solve());
+                }
+                label.setText(Exp.getX() + " + ");
+                numField.setText("");
+                clearError();
+                typeExp = 3;
+            } catch (Exception e1) {
+                errorField.setText(e1.getMessage());
+            }
         }
     }
 
     private class MinBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            numField.setText(numField.getText() + '-');
+            try {
+                if (numField.getText().length() <= 0) {
+                    numField.setText("-");
+                    return;
+                }
+                TerminalExpression firstNum = new TerminalExpression(Double.parseDouble(numField.getText()));
+                if (first) {
+                    Exp = firstNum;
+                    first = false;
+                }
+                else {
+                    SubstractExpression res = new SubstractExpression(Exp, firstNum);
+                    Exp = new TerminalExpression(res.solve());
+                }
+                label.setText(Exp.getX() + " - ");
+                numField.setText("");
+                clearError();
+                typeExp = 4;
+            } catch (Exception e1) {
+                errorField.setText(e1.getMessage());
+            }
         }
     }
 
     private class SquareBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            numField.setText(numField.getText() + "√");
+            try {
+                if (numField.getText().length() <= 0) throw new Exception("Tidak ada angka");
+                TerminalExpression firstNum = new TerminalExpression(Double.parseDouble(numField.getText()));
+                SqrtExpression res = new SqrtExpression(firstNum);
+                Exp = new TerminalExpression(res.solve());
+                label.setText("√");
+                clearError();
+                typeExp = 5;
+            } catch (Exception e1) {
+                errorField.setText(e1.getMessage());
+            }
         }
+    }
+
+    private void setLabelText(String s) {
+        if (s.length() > MAXSTRINGLABEL) {
+            label.setText(s.substring(s.length() - MAXSTRINGLABEL, MAXSTRINGLABEL));
+        } else label.setText(s);
+    }
+
+    private void resetAtt() {
+        Exp = new TerminalExpression(0.0);
+        first = true;
+    }
+
+    private void resetField() {
+        clearError();
+        label.setText("");
+        numField.setText("");
+    }
+
+    private void clearError() {
+        errorField.setText("");
     }
 }

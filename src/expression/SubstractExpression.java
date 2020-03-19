@@ -5,7 +5,11 @@ public class SubstractExpression extends BinaryExpression {
 		super(x, y);
 	}
 
-	public double solve(){
-		return this.x.solve() - this.y.solve();
+	private Double Substract(Double x, Double y){ 
+		return x - y;
+	}
+
+	public Double solve(){
+		return Substract(this.x.solve() - this.y.solve());
 	}
 }

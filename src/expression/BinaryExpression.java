@@ -1,5 +1,3 @@
-package expression;
-
 /**
  * Class untuk implementasi ekspresi biner (tambah, kurang, kali, bagi, dst.)
  * pada aplikasi Calculator
@@ -9,6 +7,9 @@ package expression;
  * @author : Kelompok 06 Tugas Besar OOP
  * @since : 18 Maret 2020
  */
+
+package expression;
+
 abstract class BinaryExpression implements Expression {
 
     protected Expression x;
@@ -19,5 +20,5 @@ abstract class BinaryExpression implements Expression {
         this.y = y;
     }
 
-    abstract public double solve();
+    abstract public Double solve();
 }

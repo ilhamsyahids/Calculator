@@ -11,11 +11,11 @@ public class TerminalExpression implements Expression{
 		return x;
 	}
 
-	public void setX(double x) {
+	public void setX(Double x) {
 		this.x = x;
 	}
 
-  	public double solve(){
+  	public Double solve(){
     	return this.x;
   	}
 }

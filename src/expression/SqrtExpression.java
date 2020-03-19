@@ -3,9 +3,13 @@ package expression;
 public class SqrtExpression extends UnaryExpression{
 	public SqrtExpression(Expression x){
     	super(x);
-  	}
+	}
+	  
+	private Double Sqrt(Double x){ 
+		return Math.sqrt(x);
+	}
 
-  	public double solve(){
-    	return Math.sqrt(this.x.solve());
+  	public Double solve(){
+    	return Sqrt(Math.sqrt(this.x.solve()));
   	}
 }

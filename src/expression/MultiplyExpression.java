@@ -1,5 +1,3 @@
-package expression;
-
 /**
  * Class untuk implementasi ekspresi perkalian pada Calculator
  * Disusun dalam rangka memenuhi Tugas Besar IF2210
@@ -8,6 +6,9 @@ package expression;
  * @author : Kelompok 06 Tugas Besar OOP
  * @since : 18 Maret 2020
  */
+
+package expression;
+
 public class MultiplyExpression extends BinaryExpression {
 
 	/**
@@ -20,12 +21,16 @@ public class MultiplyExpression extends BinaryExpression {
 		super(x, y);
 	}
 
+	private Double Multiply(Double x, Double y){ 
+		return x * y;
+	}
+
 	/**
 	 * Mengembalikan nilai dari ekspresi perkalian
 	 *
 	 * @return hasil perkalian dari Expression x dengan Expression y
 	 */
-	public double solve(){
-		return this.x.solve() * this.y.solve();
+	public Double solve(){
+		return Multiply(this.x.solve() * this.y.solve());
 	}
 }

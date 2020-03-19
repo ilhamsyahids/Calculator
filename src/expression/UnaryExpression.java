@@ -7,5 +7,5 @@ abstract class UnaryExpression implements Expression {
     	this.x = x;
   	}
 
-	abstract public Double solve();
+	abstract public double solve();
 }

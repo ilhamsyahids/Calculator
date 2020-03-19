@@ -5,7 +5,7 @@ public class SqrtExpression extends UnaryExpression{
     	super(x);
   	}
 
-  	public Double solve(){
+  	public double solve(){
     	return Math.sqrt(this.x.solve());
   	}
 }

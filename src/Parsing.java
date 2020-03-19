@@ -26,11 +26,11 @@ public class Parsing{
 		return this.op;
 	}
 	
-	public int getNum1() {
+	public double getNum1() {
 		return Integer.parseInt(this.Num2);
 	}
 	
-	public int getNum2() {
+	public double getNum2() {
 		return Integer.parseInt(this.Num2);
 	}
 	

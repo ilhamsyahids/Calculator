@@ -1,3 +1,5 @@
+package expression;
+
 /**
  * Class untuk implementasi ekspresi penjumlahan pada Calculator
  * Disusun dalam rangka memenuhi Tugas Besar IF2210
@@ -6,9 +8,6 @@
  * @author : Kelompok 06 Tugas Besar OOP
  * @since : 18 Maret 2020
  */
-
-package expression;
-
 public class AddExpression extends BinaryExpression {
 
 	/**
@@ -21,7 +20,7 @@ public class AddExpression extends BinaryExpression {
 		super(x, y);
 	}
 
-	private Double Add(Double x, Double y){ 
+	private Double add(Double x, Double y){
 		return x + y;
 	}
 
@@ -31,6 +30,6 @@ public class AddExpression extends BinaryExpression {
 	 * @return hasil penjumlahan dari Expression x dengan Expression y
 	 */
 	public Double solve(){
-		return Add(this.x.solve(), this.y.solve());
+		return add(this.x.solve(), this.y.solve());
 	}
 }

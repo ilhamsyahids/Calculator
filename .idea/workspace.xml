@@ -3,6 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="517d2a46-0011-433b-aed4-c45669c1524d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/expression/AddExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/AddExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/expression/DivideExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/DivideExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/expression/MultiplyExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/MultiplyExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/expression/NegativeExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/NegativeExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/expression/SqrtExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/SqrtExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/expression/SubstractExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/SubstractExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/expression/TerminalExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/TerminalExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/expression/UnaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/UnaryExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/memcalc/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/memcalc/Memory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/controller/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/MainWindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/expression/AddExpressionTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,14 +28,6 @@
         <option value="JUnit4 Test Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>ui</find>
-      <find>work</find>
-      <find>works</find>
-      <find>clear()</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -160,42 +164,46 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1237" height="182" key="GridCell.Tab.0.bottom" timestamp="1584622884407">
+    <state width="1237" height="32" key="GridCell.Tab.0.bottom" timestamp="1584674527346">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="182" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1584622884407" />
-    <state width="1237" height="182" key="GridCell.Tab.0.center" timestamp="1584622884407">
+    <state width="1237" height="32" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1584674527346" />
+    <state width="1237" height="32" key="GridCell.Tab.0.center" timestamp="1584674527346">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="182" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1584622884407" />
-    <state width="1237" height="182" key="GridCell.Tab.0.left" timestamp="1584622884407">
+    <state width="1237" height="32" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1584674527346" />
+    <state width="1237" height="32" key="GridCell.Tab.0.left" timestamp="1584674527346">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="182" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1584622884407" />
-    <state width="1237" height="182" key="GridCell.Tab.0.right" timestamp="1584622884407">
+    <state width="1237" height="32" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1584674527346" />
+    <state width="1237" height="32" key="GridCell.Tab.0.right" timestamp="1584674527346">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="182" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1584622884407" />
-    <state width="1237" height="182" key="GridCell.Tab.1.bottom" timestamp="1584622884407">
+    <state width="1237" height="32" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1584674527346" />
+    <state width="1237" height="290" key="GridCell.Tab.1.bottom" timestamp="1584673952382">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="182" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1584622884407" />
-    <state width="1237" height="182" key="GridCell.Tab.1.center" timestamp="1584622884407">
+    <state width="1237" height="290" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1584673952382" />
+    <state width="1237" height="290" key="GridCell.Tab.1.center" timestamp="1584673952381">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="182" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1584622884407" />
-    <state width="1237" height="182" key="GridCell.Tab.1.left" timestamp="1584622884407">
+    <state width="1237" height="290" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1584673952381" />
+    <state width="1237" height="290" key="GridCell.Tab.1.left" timestamp="1584673952381">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="182" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1584622884407" />
-    <state width="1237" height="182" key="GridCell.Tab.1.right" timestamp="1584622884407">
+    <state width="1237" height="290" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1584673952381" />
+    <state width="1237" height="290" key="GridCell.Tab.1.right" timestamp="1584673952381">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="182" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1584622884407" />
+    <state width="1237" height="290" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1584673952381" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1584599749770">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1584599749770" />
+    <state x="314" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1584674722688">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="314" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1584674722688" />
     <state x="376" y="230" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1584599792259">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -204,10 +212,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="412" y="18" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.680@0.0.1280.680" timestamp="1584599861802" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1584623944160">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1584673404431">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1584623944160" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1584673404431" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

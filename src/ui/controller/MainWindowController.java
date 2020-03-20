@@ -2,6 +2,7 @@ package ui.controller;
 
 import expression.*;
 import ui.view.MainWindow;
+import memcalc.Memory;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -40,6 +41,7 @@ public class MainWindowController {
     private Double ans;
     private boolean first;
     private int typeExp;
+    private Memory<Double> MM;
 
     public MainWindowController() {
         initComponents();
@@ -51,6 +53,8 @@ public class MainWindowController {
         ans = 0.0;
         first = true;
         Exp = new TerminalExpression(0.0);
+        MM = new Memory<Double>();
+
         mainWindow = new MainWindow();
         btnOne = mainWindow.getBtnOne();
         btnTwo = mainWindow.getBtnTwo();
@@ -206,14 +210,20 @@ public class MainWindowController {
     private class MemCBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            MM.memorize(Double.valueOf(label.getText()));
+            errorField.setText("Berhasil disimpan");
         }
     }
 
     private class MemRBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            try {
+                Double memoryRecall = MM.recall();
+                label.setText(Double.toString(memoryRecall));
+            } catch(Exception ex) {
+                errorField.setText(ex.getMessage());
+            }
         }
     }
 
@@ -279,7 +289,7 @@ public class MainWindowController {
         public void actionPerformed(ActionEvent e) {
             try {
                 if (numField.getText().length() <= 0) throw new Exception("Tidak ada angka");
-                if (Double.parseDouble(numField.getText()) <= 0) throw new Exception("Pembilang Nol");
+                if (Double.parseDouble(numField.getText()) == 0.0000) throw new Exception("Pembilang Nol");
                 TerminalExpression firstNum = new TerminalExpression(Double.parseDouble(numField.getText()));
                 if (first) {
                     Exp = firstNum;

@@ -21,7 +21,14 @@ public class MultiplyExpression extends BinaryExpression {
 		super(x, y);
 	}
 
-	private Double Multiply(Double x, Double y){ 
+	/**
+	 * Method overloading : multiply
+	 *
+	 * @param x Bilangan pertama
+	 * @param y Bilangan kedua
+	 * @return Hasil perkalian x dengan y
+	 */
+	private Double multiply(Double x, Double y){
 		return x * y;
 	}
 
@@ -31,6 +38,6 @@ public class MultiplyExpression extends BinaryExpression {
 	 * @return hasil perkalian dari Expression x dengan Expression y
 	 */
 	public Double solve(){
-		return Multiply(this.x.solve(), this.y.solve());
+		return multiply(this.x.solve(), this.y.solve());
 	}
 }

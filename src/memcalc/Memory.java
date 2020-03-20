@@ -33,20 +33,20 @@ public class Memory<T extends Number> {
      *
      * @param entry : Hasil kalkulasi yang ingin dimasukkan
      */
-    public void memorizeCalculation(T entry) {
+    public void memorize(T entry) {
         this.Buffer.add(entry);
     }
 
     /**
-     * Mengambil hasil kalkulasi yang disimpan dengan aturan FIFO
-     * (First In First Out)
+     * Mengambil hasil kalkulasi yang disimpan
+     * dengan aturan FIFO (First In First Out)
      * Melempar NoSuchElementException apabila sudah tak ada hasil kalkulasi yang disimpan
      *
      * @return Hasil kalkulasi yang terdapat pada Head dari Queue
      */
     public T recall() {
         if (this.Buffer.size() == 0) {
-            throw new NoSuchElementException("Tidak ada hasil yang direkam");
+            throw new NoSuchElementException("Tidak ada hasil yang direkam di memori");
         }
         return this.Buffer.remove();
     }

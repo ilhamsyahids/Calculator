@@ -5,7 +5,7 @@ import javax.swing.*;
 public class MainWindow extends JFrame{
     private JTextField numField;
     private JTextField errorField;
-    private JLabel label;
+    private JTextField label;
     private JButton btnDot;
     private JButton btnZero;
     private JButton btnAns;
@@ -44,7 +44,7 @@ public class MainWindow extends JFrame{
         return errorField;
     }
 
-    public JLabel getLabel() {
+    public JTextField getLabel() {
         return label;
     }
 

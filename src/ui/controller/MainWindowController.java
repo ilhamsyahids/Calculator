@@ -9,12 +9,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MainWindowController {
-    private static final int MAXSTRINGLABEL = 15;
-
     private MainWindow mainWindow;
     private JTextField numField;
     private JTextField errorField;
-    private JLabel label;
+    private JTextField label;
     private JButton btnOne;
     private JButton btnTwo;
     private JButton btnDot;
@@ -53,7 +51,7 @@ public class MainWindowController {
         ans = 0.0;
         first = true;
         Exp = new TerminalExpression(0.0);
-        MM = new Memory<Double>();
+        MM = new Memory<>();
 
         mainWindow = new MainWindow();
         btnOne = mainWindow.getBtnOne();
@@ -201,17 +199,20 @@ public class MainWindowController {
     private class ClearBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            numField.setText("");
-            label.setText("");
-            clearError();
+            resetAtt();
+            resetField();
         }
     }
 
     private class MemCBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            MM.memorize(Double.valueOf(label.getText()));
-            errorField.setText("Berhasil disimpan");
+            try {
+                MM.memorize(Double.parseDouble(numField.getText()));
+                errorField.setText("Berhasil disimpan");
+            } catch (Exception e1) {
+                errorField.setText("Tidak ada angka");
+            }
         }
     }
 
@@ -220,7 +221,7 @@ public class MainWindowController {
         public void actionPerformed(ActionEvent e) {
             try {
                 Double memoryRecall = MM.recall();
-                label.setText(Double.toString(memoryRecall));
+                numField.setText(memoryRecall.toString());
             } catch(Exception ex) {
                 errorField.setText(ex.getMessage());
             }
@@ -231,32 +232,47 @@ public class MainWindowController {
         @Override
         public void actionPerformed(ActionEvent e) {
             TerminalExpression firstNum = new TerminalExpression(Double.parseDouble(numField.getText()));
-            switch (typeExp) {
-                case 1:
-                    MultiplyExpression mul = new MultiplyExpression(Exp, firstNum);
-                    Exp = new TerminalExpression(mul.solve());
-                    break;
-                case 2:
-                    DivideExpression div = new DivideExpression(Exp, firstNum);
-                    Exp = new TerminalExpression(div.solve());
-                    break;
-                case 3:
-                    AddExpression add = new AddExpression(Exp, firstNum);
-                    Exp = new TerminalExpression(add.solve());
-                    break;
-                case 4:
-                    SubstractExpression sub = new SubstractExpression (Exp, firstNum);
-                    Exp = new TerminalExpression(sub.solve());
-                    break;
-                case 5:
-                    SqrtExpression sqrt = new SqrtExpression(firstNum);
-                    Exp = new TerminalExpression(sqrt.solve());
-                    break;
+            try {
+                switch (typeExp) {
+                    case 1:
+                        MultiplyExpression mul = new MultiplyExpression(Exp, firstNum);
+                        Exp = new TerminalExpression(mul.solve());
+                        break;
+                    case 2:
+                        DivideExpression div = new DivideExpression(Exp, firstNum);
+                        if (div.solve().isInfinite()) throw new Exception("Error: Pembagi Nol");
+                        Exp = new TerminalExpression(div.solve());
+                        break;
+                    case 3:
+                        AddExpression add = new AddExpression(Exp, firstNum);
+                        Exp = new TerminalExpression(add.solve());
+                        break;
+                    case 4:
+                        SubstractExpression sub = new SubstractExpression (Exp, firstNum);
+                        Exp = new TerminalExpression(sub.solve());
+                        break;
+                    case 5:
+                        SqrtExpression sqrt = new SqrtExpression(firstNum);
+                        if (sqrt.solve().isNaN()) throw new Exception("Error: Imajiner");
+                        Exp = new TerminalExpression(sqrt.solve());
+                        break;
+                    default:
+                        Exp = firstNum;
+                }
+                if (typeExp == 0) {
+                    label.setText(numField.getText());
+                    ans = Double.parseDouble(numField.getText());
+                } else {
+                    ans = Exp.solve();
+                    label.setText(label.getText() + firstNum.solve() + " = " + ans.toString());
+                }
+                numField.setText("");
+                clearError();
+                typeExp = 0;
+                first = true;
+            } catch (Exception e1) {
+                errorField.setText(e1.getMessage());
             }
-            ans = Exp.solve();
-            resetField();
-            resetAtt();
-            label.setText(ans.toString());
         }
     }
 
@@ -274,9 +290,8 @@ public class MainWindowController {
                     MultiplyExpression res = new MultiplyExpression(Exp, firstNum);
                     Exp = new TerminalExpression(res.solve());
                 }
-                label.setText(Exp.getX() + " x ");
-                numField.setText("");
-                clearError();
+                resetField();
+                label.setText(Exp.getX() + " : ");
                 typeExp = 1;
             } catch (Exception e1) {
                 errorField.setText(e1.getMessage());
@@ -299,9 +314,8 @@ public class MainWindowController {
                     DivideExpression res = new DivideExpression(Exp, firstNum);
                     Exp = new TerminalExpression(res.solve());
                 }
+                resetField();
                 label.setText(Exp.getX() + " : ");
-                numField.setText("");
-                clearError();
                 typeExp = 2;
             } catch (Exception e1) {
                 errorField.setText(e1.getMessage());
@@ -323,9 +337,8 @@ public class MainWindowController {
                     AddExpression res = new AddExpression(Exp, firstNum);
                     Exp = new TerminalExpression(res.solve());
                 }
-                label.setText(Exp.getX() + " + ");
-                numField.setText("");
-                clearError();
+                resetField();
+                label.setText(Exp.getX() + " : ");
                 typeExp = 3;
             } catch (Exception e1) {
                 errorField.setText(e1.getMessage());
@@ -350,9 +363,8 @@ public class MainWindowController {
                     SubstractExpression res = new SubstractExpression(Exp, firstNum);
                     Exp = new TerminalExpression(res.solve());
                 }
-                label.setText(Exp.getX() + " - ");
-                numField.setText("");
-                clearError();
+                resetField();
+                label.setText(Exp.getX() + " : ");
                 typeExp = 4;
             } catch (Exception e1) {
                 errorField.setText(e1.getMessage());
@@ -364,12 +376,7 @@ public class MainWindowController {
         @Override
         public void actionPerformed(ActionEvent e) {
             try {
-                if (numField.getText().length() <= 0) throw new Exception("Tidak ada angka");
-                TerminalExpression firstNum = new TerminalExpression(Double.parseDouble(numField.getText()));
-                SqrtExpression res = new SqrtExpression(firstNum);
-                Exp = new TerminalExpression(res.solve());
                 label.setText("√");
-                clearError();
                 typeExp = 5;
             } catch (Exception e1) {
                 errorField.setText(e1.getMessage());
@@ -377,15 +384,12 @@ public class MainWindowController {
         }
     }
 
-    private void setLabelText(String s) {
-        if (s.length() > MAXSTRINGLABEL) {
-            label.setText(s.substring(s.length() - MAXSTRINGLABEL, MAXSTRINGLABEL));
-        } else label.setText(s);
-    }
-
     private void resetAtt() {
-        Exp = new TerminalExpression(0.0);
+        typeExp = 0;
+        ans = 0.0;
         first = true;
+        Exp = new TerminalExpression(0.0);
+        MM.clear();
     }
 
     private void resetField() {

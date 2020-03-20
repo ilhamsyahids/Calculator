@@ -50,4 +50,8 @@ public class Memory<T extends Number> {
         }
         return this.Buffer.remove();
     }
+
+    public void clear() {
+        this.Buffer.clear();
+    }
 }

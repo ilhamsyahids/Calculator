@@ -14,7 +14,7 @@ import java.util.NoSuchElementException;
  * @since : 19 Maret 2020
  **/
 
-public class Memory<T extends Number> {
+public class Memory<T> {
 
     /**
      * Implementasi MC dan MR memanfaatkan struktur data Queue
@@ -51,6 +51,9 @@ public class Memory<T extends Number> {
         return this.Buffer.remove();
     }
 
+    /**
+     * Mengosongkan isi queue
+     */
     public void clear() {
         this.Buffer.clear();
     }

@@ -39,7 +39,7 @@ public class MainWindowController {
     private Double ans;
     private boolean first;
     private int typeExp;
-    private Memory<Double> MM;
+    private Memory<Double> memo;
 
     public MainWindowController() {
         initComponents();
@@ -51,7 +51,7 @@ public class MainWindowController {
         ans = 0.0;
         first = true;
         Exp = new TerminalExpression(0.0);
-        MM = new Memory<>();
+        memo = new Memory<Double>();
 
         mainWindow = new MainWindow();
         btnOne = mainWindow.getBtnOne();
@@ -208,10 +208,22 @@ public class MainWindowController {
         @Override
         public void actionPerformed(ActionEvent e) {
             try {
-                MM.memorize(Double.parseDouble(numField.getText()));
+                if(typeExp != 0) {
+                    throw new NumberFormatException("Selesaikan perhitungan terlebih dahulu");
+                } else {
+                    if(numField.getText().length() > 0){
+                        memo.memorize(Double.valueOf(numField.getText()));
+                    } else {
+                        memo.memorize(ans);
+                    }
+                }
                 errorField.setText("Berhasil disimpan");
             } catch (Exception e1) {
-                errorField.setText("Tidak ada angka");
+                if(e1.getMessage().equals("Selesaikan perhitungan terlebih dahulu")){
+                    errorField.setText(e1.getMessage());
+                } else {
+                    errorField.setText("Tidak ada angka");
+                }
             }
         }
     }
@@ -220,7 +232,7 @@ public class MainWindowController {
         @Override
         public void actionPerformed(ActionEvent e) {
             try {
-                Double memoryRecall = MM.recall();
+                Double memoryRecall = memo.recall();
                 numField.setText(memoryRecall.toString());
             } catch(Exception ex) {
                 errorField.setText(ex.getMessage());
@@ -231,8 +243,9 @@ public class MainWindowController {
     private class EquBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            TerminalExpression firstNum = new TerminalExpression(Double.parseDouble(numField.getText()));
+            //TerminalExpression firstNum = new TerminalExpression(Double.parseDouble(numField.getText()));
             try {
+                TerminalExpression firstNum = new TerminalExpression(Double.parseDouble(numField.getText()));
                 switch (typeExp) {
                     case 1:
                         MultiplyExpression mul = new MultiplyExpression(Exp, firstNum);
@@ -291,7 +304,7 @@ public class MainWindowController {
                     Exp = new TerminalExpression(res.solve());
                 }
                 resetField();
-                label.setText(Exp.getX() + " : ");
+                label.setText(Exp.getX() + " x ");
                 typeExp = 1;
             } catch (Exception e1) {
                 errorField.setText(e1.getMessage());
@@ -338,7 +351,7 @@ public class MainWindowController {
                     Exp = new TerminalExpression(res.solve());
                 }
                 resetField();
-                label.setText(Exp.getX() + " : ");
+                label.setText(Exp.getX() + " + ");
                 typeExp = 3;
             } catch (Exception e1) {
                 errorField.setText(e1.getMessage());
@@ -364,7 +377,7 @@ public class MainWindowController {
                     Exp = new TerminalExpression(res.solve());
                 }
                 resetField();
-                label.setText(Exp.getX() + " : ");
+                label.setText(Exp.getX() + " - ");
                 typeExp = 4;
             } catch (Exception e1) {
                 errorField.setText(e1.getMessage());
@@ -389,7 +402,7 @@ public class MainWindowController {
         ans = 0.0;
         first = true;
         Exp = new TerminalExpression(0.0);
-        MM.clear();
+        memo.clear();
     }
 
     private void resetField() {

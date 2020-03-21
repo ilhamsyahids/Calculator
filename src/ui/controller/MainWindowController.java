@@ -253,7 +253,6 @@ public class MainWindowController {
                         break;
                     case 2:
                         DivideExpression div = new DivideExpression(Exp, firstNum);
-                        if (div.solve().isInfinite()) throw new Exception("Error: Pembagi Nol");
                         Exp = new TerminalExpression(div.solve());
                         break;
                     case 3:
@@ -266,7 +265,6 @@ public class MainWindowController {
                         break;
                     case 5:
                         SqrtExpression sqrt = new SqrtExpression(firstNum);
-                        if (sqrt.solve().isNaN()) throw new Exception("Error: Imajiner");
                         Exp = new TerminalExpression(sqrt.solve());
                         break;
                     default:
@@ -279,12 +277,16 @@ public class MainWindowController {
                     ans = Exp.solve();
                     label.setText(label.getText() + firstNum.solve() + " = " + ans.toString());
                 }
-                numField.setText("");
+                //numField.setText("");
                 clearError();
+                //typeExp = 0;
+                //first = true;
+            } catch (Exception ex) {
+                errorField.setText(ex.getMessage());
+            } finally {
+                numField.setText("");
                 typeExp = 0;
                 first = true;
-            } catch (Exception e1) {
-                errorField.setText(e1.getMessage());
             }
         }
     }

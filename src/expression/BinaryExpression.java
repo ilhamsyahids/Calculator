@@ -12,13 +12,26 @@ package expression;
 
 abstract class BinaryExpression implements Expression {
 
+    /**
+     * Sebuah Binary Expression minimal
+     * terdiri dari dua buah Expression Dasar
+     */
     protected Expression x;
     protected Expression y;
 
+    /**
+     * Constructor
+     * @param x : Expression pertama
+     * @param y : Expression kedua
+     */
 	public BinaryExpression(Expression x, Expression y) {
         this.x = x;
         this.y = y;
     }
 
+    /**
+     * Mengahasilkan nilai ekspresi
+     * @return Nilai Expression (double)
+     */
     abstract public Double solve();
 }

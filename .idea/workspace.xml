@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="517d2a46-0011-433b-aed4-c45669c1524d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/memcalc/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/memcalc/Memory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/expression/BinaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/BinaryExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/expression/DivideExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/DivideExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/expression/SqrtExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/SqrtExpression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/controller/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/MainWindowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/view/MainWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/view/MainWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/expression/UnaryExpressionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/expression/UnaryExpressionTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,10 +31,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
   </component>
   <component name="ProjectId" id="1ZKiuBhdKSmKQNfk8lmgUTGTlO8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -83,7 +80,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UnaryExpressionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BinaryExpressionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Calculator" />
       <extension name="coverage">
         <pattern>
@@ -92,13 +89,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="expression" />
-      <option name="MAIN_CLASS_NAME" value="expression.UnaryExpressionTest" />
+      <option name="MAIN_CLASS_NAME" value="expression.BinaryExpressionTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UnaryExpressionTest.solveNegativeTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BinaryExpressionTest.solveMulExpression" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Calculator" />
       <extension name="coverage">
         <pattern>
@@ -107,14 +104,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="expression" />
-      <option name="MAIN_CLASS_NAME" value="expression.UnaryExpressionTest" />
-      <option name="METHOD_NAME" value="solveNegativeTest1" />
+      <option name="MAIN_CLASS_NAME" value="expression.BinaryExpressionTest" />
+      <option name="METHOD_NAME" value="solveMulExpression" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UnaryExpressionTest.solveSqrt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BinaryExpressionTest.testDivideExceptionMsg" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Calculator" />
       <extension name="coverage">
         <pattern>
@@ -123,14 +120,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="expression" />
-      <option name="MAIN_CLASS_NAME" value="expression.UnaryExpressionTest" />
-      <option name="METHOD_NAME" value="solveSqrt" />
+      <option name="MAIN_CLASS_NAME" value="expression.BinaryExpressionTest" />
+      <option name="METHOD_NAME" value="testDivideExceptionMsg" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UnaryExpressionTest.solveSqrt2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UnaryExpressionTest.solveSqrtException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Calculator" />
       <extension name="coverage">
         <pattern>
@@ -140,7 +137,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="expression" />
       <option name="MAIN_CLASS_NAME" value="expression.UnaryExpressionTest" />
-      <option name="METHOD_NAME" value="solveSqrt2" />
+      <option name="METHOD_NAME" value="solveSqrtException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -149,10 +146,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.UnaryExpressionTest.solveSqrt2" />
-        <item itemvalue="JUnit.UnaryExpressionTest.solveSqrt" />
-        <item itemvalue="JUnit.UnaryExpressionTest" />
-        <item itemvalue="JUnit.UnaryExpressionTest.solveNegativeTest1" />
+        <item itemvalue="JUnit.BinaryExpressionTest" />
+        <item itemvalue="JUnit.BinaryExpressionTest.solveMulExpression" />
+        <item itemvalue="JUnit.BinaryExpressionTest.testDivideExceptionMsg" />
+        <item itemvalue="JUnit.UnaryExpressionTest.solveSqrtException" />
       </list>
     </recent_temporary>
   </component>
@@ -186,22 +183,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1584766879975" />
-    <state width="1237" height="25" key="GridCell.Tab.0.bottom" timestamp="1584767307508">
+    <state width="1237" height="186" key="GridCell.Tab.0.bottom" timestamp="1584780345275">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="25" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1584767307508" />
-    <state width="1237" height="25" key="GridCell.Tab.0.center" timestamp="1584767307508">
+    <state width="1237" height="186" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1584780345275" />
+    <state width="1237" height="186" key="GridCell.Tab.0.center" timestamp="1584780345275">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="25" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1584767307508" />
-    <state width="1237" height="25" key="GridCell.Tab.0.left" timestamp="1584767307508">
+    <state width="1237" height="186" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1584780345275" />
+    <state width="1237" height="186" key="GridCell.Tab.0.left" timestamp="1584780345274">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="25" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1584767307508" />
-    <state width="1237" height="25" key="GridCell.Tab.0.right" timestamp="1584767307508">
+    <state width="1237" height="186" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1584780345274" />
+    <state width="1237" height="186" key="GridCell.Tab.0.right" timestamp="1584780345275">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="25" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1584767307508" />
+    <state width="1237" height="186" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1584780345275" />
     <state width="1237" height="290" key="GridCell.Tab.1.bottom" timestamp="1584673952382">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -222,18 +219,18 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1584764075815" />
-    <state x="314" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1584762191942">
+    <state x="314" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1584778391147">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="314" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1584762191942" />
+    <state x="314" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1584778391147" />
     <state x="376" y="230" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1584599792259">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="376" y="230" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" timestamp="1584599792259" />
-    <state x="412" y="18" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1584766180532">
+    <state x="412" y="18" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1584779615271">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="412" y="18" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.680@0.0.1280.680" timestamp="1584766180532" />
+    <state x="412" y="18" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.680@0.0.1280.680" timestamp="1584779615271" />
     <state x="413" y="219" key="com.intellij.uiDesigner.propertyInspector.editors.string.StringEditorDialog" timestamp="1584766037174">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

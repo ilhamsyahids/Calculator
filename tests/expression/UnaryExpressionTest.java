@@ -50,4 +50,14 @@ public class UnaryExpressionTest {
         utest = new SqrtExpression(x);
         assertEquals(Math.sqrt(1.8+0.55), utest.solve(), 0.000001);
     }
+
+    /**
+     * Menguji exception handling
+     * pada SqrtExpression
+     */
+    @Test(expected=ArithmeticException.class)
+    public void solveSqrtException() {
+        utest = new SqrtExpression(new TerminalExpression(-3.0));
+        utest.solve();
+    }
 }

@@ -38,8 +38,15 @@ public class BinaryExpressionTest {
     }
 
     @Test
-    public void solveAddExpression() {
+    public void solveSubsExpression() {
         b = new SubstractExpression(new TerminalExpression(6.0), new TerminalExpression(3.5));
         assertEquals(2.5, b.solve(), 0.0001);
     }
+
+    @Test
+    public void solveAddExpression(){
+        b = new AddExpression(new TerminalExpression(2.5), new TerminalExpression(2.6));
+        assertEquals(5.1, b.solve(), 0.0001);
+    }
+
 }

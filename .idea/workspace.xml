@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="517d2a46-0011-433b-aed4-c45669c1524d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/controller/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/controller/MainWindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/expression/BinaryExpressionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/expression/BinaryExpressionTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +29,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1ZKiuBhdKSmKQNfk8lmgUTGTlO8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -40,6 +48,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE" value="left" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="212" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -49,12 +58,12 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -68,7 +77,7 @@
       <recent name="$PROJECT_DIR$/src/ui/view" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.BinaryExpressionTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Calculator" />
@@ -139,10 +148,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.BinaryExpressionTest" />
+      <item itemvalue="JUnit.BinaryExpressionTest.solveMulExpression" />
+      <item itemvalue="JUnit.BinaryExpressionTest.testDivideExceptionMsg" />
+      <item itemvalue="JUnit.UnaryExpressionTest.solveSqrtException" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.BinaryExpressionTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.BinaryExpressionTest.solveMulExpression" />
         <item itemvalue="JUnit.BinaryExpressionTest.testDivideExceptionMsg" />
         <item itemvalue="JUnit.UnaryExpressionTest.solveSqrtException" />
@@ -175,26 +191,39 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584766879975">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="361" y="71" key="#Project_Structure" timestamp="1584799736256">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1584799736256" />
+    <state x="-98" y="43" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584799852981">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1584766879975" />
-    <state width="1237" height="7" key="GridCell.Tab.0.bottom" timestamp="1584781916379">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="-98" y="43" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1584799852981" />
+    <state x="549" y="130" key="FileChooserDialogImpl" timestamp="1584802885745">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="130" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1584802885745" />
+    <state width="1342" height="195" key="GridCell.Tab.0.bottom" timestamp="1584802797876">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1237" height="7" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1584781916379" />
-    <state width="1237" height="7" key="GridCell.Tab.0.center" timestamp="1584781916379">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1342" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584802797876" />
+    <state width="1342" height="195" key="GridCell.Tab.0.center" timestamp="1584802797876">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1237" height="7" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1584781916379" />
-    <state width="1237" height="7" key="GridCell.Tab.0.left" timestamp="1584781916379">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1342" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584802797876" />
+    <state width="1342" height="195" key="GridCell.Tab.0.left" timestamp="1584802797876">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1237" height="7" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1584781916379" />
-    <state width="1237" height="7" key="GridCell.Tab.0.right" timestamp="1584781916379">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1342" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584802797876" />
+    <state width="1342" height="195" key="GridCell.Tab.0.right" timestamp="1584802797876">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1237" height="7" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1584781916379" />
+    <state width="1342" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584802797876" />
     <state width="1237" height="290" key="GridCell.Tab.1.bottom" timestamp="1584673952382">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -211,18 +240,21 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="290" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1584673952381" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1584764075815">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="170" y="0" key="SettingsEditor" timestamp="1584802899688">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1584764075815" />
-    <state x="314" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1584778391147">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="170" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1584802899688" />
+    <state x="377" y="200" key="com.intellij.ide.util.TipDialog" timestamp="1584799714667">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="314" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1584778391147" />
-    <state x="376" y="230" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1584599792259">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="377" y="200" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584799714667" />
+    <state x="451" y="279" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1584799893253">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="376" y="230" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" timestamp="1584599792259" />
+    <state x="451" y="279" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1584799893253" />
     <state x="412" y="18" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1584779615271">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -231,13 +263,20 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="413" y="219" key="com.intellij.uiDesigner.propertyInspector.editors.string.StringEditorDialog/0.0.1280.680@0.0.1280.680" timestamp="1584766037174" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1584765699534">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="364" y="1" width="807" height="822" key="search.everywhere.popup" timestamp="1584802897058">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1584765699534" />
+    <state x="364" y="1" width="807" height="822" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1584802897058" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Calculator$BinaryExpressionTest.ic" NAME="BinaryExpressionTest Coverage Results" MODIFIED="1584802797848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>expression.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Calculator$Main.ic" NAME="Main Coverage Results" MODIFIED="1584802768356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

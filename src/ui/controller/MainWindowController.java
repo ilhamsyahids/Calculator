@@ -277,16 +277,13 @@ public class MainWindowController {
                     ans = Exp.solve();
                     label.setText(label.getText() + firstNum.solve() + " = " + ans.toString());
                 }
-                //numField.setText("");
+                numField.setText(ans.toString());
                 clearError();
-                //typeExp = 0;
-                //first = true;
-            } catch (Exception ex) {
-                errorField.setText(ex.getMessage());
-            } finally {
-                numField.setText("");
                 typeExp = 0;
                 first = true;
+            } catch (Exception ex) {
+                errorField.setText(ex.getMessage());
+                numField.setText("");
             }
         }
     }

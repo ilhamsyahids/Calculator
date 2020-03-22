@@ -39,7 +39,7 @@ public class DivideExpression extends BinaryExpression {
 	 * @return hasil pembagian dari Expression x dengan Expression y
 	 */
 	public Double solve(){
-		if (this.y.solve() == 0.0) throw new ArithmeticException("Error: Pembagi Nol");
+		if (this.y.solve() == Double.parseDouble("0")) throw new ArithmeticException("Error: Penyebut Nol");
 		return divide(this.x.solve(), this.y.solve());
 	}
 }

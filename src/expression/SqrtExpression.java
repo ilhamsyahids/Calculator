@@ -37,7 +37,7 @@ public class SqrtExpression extends UnaryExpression{
 	 * @return Hasil akar kuadrat dari expression
 	 */
   	public Double solve(){
-  		if(this.x.solve() < 0.0) throw new ArithmeticException("Error: imajiner");
+  		if(this.x.solve() < Double.parseDouble("0")) throw new ArithmeticException("Error: Galat Matematika");
     	return sqrt(this.x.solve());
   	}
 }

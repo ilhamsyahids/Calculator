@@ -46,7 +46,7 @@ public class Memory<T> {
      */
     public T recall() {
         if (this.Buffer.size() == 0) {
-            throw new NoSuchElementException("Tidak ada hasil yang direkam di memori");
+            throw new NoSuchElementException("Tidak ada data");
         }
         return this.Buffer.remove();
     }

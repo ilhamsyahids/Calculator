@@ -336,7 +336,6 @@ public class MainWindowController {
         public void actionPerformed(ActionEvent e) {
             try {
                 if (numField.getText().length() <= 0) throw new Exception("Tidak ada angka");
-                if (Double.parseDouble(numField.getText()) == 0.0000) throw new Exception("Pembilang Nol");
                 TerminalExpression firstNum = new TerminalExpression(Double.parseDouble(numField.getText()));
                 if (first) {
                     Exp = firstNum;

@@ -24,5 +24,7 @@ Aplikasi ini terbagi atas tiga buah folder :
 Gunakan aplikasi IDE (contoh: IntelliJ) untuk membuka file project ini dan jalankan main program dengan command `RUN` atau jalankan pada terminal
 ```find . -name "*.java" > sources.txt && javac @sources.txt -encoding ISO-8859-1 && cd src/ && java Main```
 
+Anda juga dapat menjalankan file Calculator.jar dengan menggunakan command ```java -jar Calculator.jar``` 
+
 ## Screenshot Aplikasi
 ![Screenshot Aplikasi](ssApps.png)

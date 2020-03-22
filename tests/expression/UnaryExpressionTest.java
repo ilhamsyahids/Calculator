@@ -88,7 +88,7 @@ public class UnaryExpressionTest {
             utest = new SqrtExpression(new TerminalExpression(-1.35));
             utest.solve();
         } catch(Exception ex) {
-            assertEquals("Error: imajiner", ex.getMessage());
+            assertEquals("Error: Galat Matematika", ex.getMessage());
         }
     }
 }

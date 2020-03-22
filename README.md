@@ -17,6 +17,7 @@ Aplikasi ini memanfaatkan tiga buah package, yaitu:
 Aplikasi ini terbagi atas tiga buah folder :
 - .idea : folder untuk konfigurasi program pada IDE
 - src : folder yang berisi source code dari package dan main program
+- bin : folder berisi program berupa file Calculator.jar
 - tests : folder yang berisi unit testing setiap package
 
 
@@ -24,7 +25,7 @@ Aplikasi ini terbagi atas tiga buah folder :
 Gunakan aplikasi IDE (contoh: IntelliJ) untuk membuka file project ini dan jalankan main program dengan command `RUN` atau jalankan pada terminal
 ```find . -name "*.java" > sources.txt && javac @sources.txt -encoding ISO-8859-1 && cd src/ && java Main```
 
-Anda juga dapat menjalankan file Calculator.jar dengan menggunakan command ```java -jar Calculator.jar``` 
+Anda juga dapat menjalankan file Calculator.jar dengan menggunakan command ```java -jar Calculator.jar``` pada folder bin
 
 ## Screenshot Aplikasi
 ![Screenshot Aplikasi](ssApps.png)

@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="517d2a46-0011-433b-aed4-c45669c1524d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/expression/BinaryExpressionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/expression/BinaryExpressionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/expression/UnaryExpressionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/expression/UnaryExpressionTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,8 +159,8 @@
       <list>
         <item itemvalue="JUnit.BinaryExpressionTest" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.BinaryExpressionTest.solveMulExpression" />
         <item itemvalue="JUnit.BinaryExpressionTest.testDivideExceptionMsg" />
+        <item itemvalue="JUnit.BinaryExpressionTest.solveMulExpression" />
         <item itemvalue="JUnit.UnaryExpressionTest.solveSqrtException" />
       </list>
     </recent_temporary>
@@ -204,26 +204,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="130" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1584802885745" />
-    <state width="1342" height="195" key="GridCell.Tab.0.bottom" timestamp="1584802797876">
+    <state width="1493" height="195" key="GridCell.Tab.0.bottom" timestamp="1584841640751">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1237" height="7" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1584781916379" />
-    <state width="1342" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584802797876" />
-    <state width="1342" height="195" key="GridCell.Tab.0.center" timestamp="1584802797876">
+    <state width="1493" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584841640751" />
+    <state width="1493" height="195" key="GridCell.Tab.0.center" timestamp="1584841640751">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1237" height="7" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1584781916379" />
-    <state width="1342" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584802797876" />
-    <state width="1342" height="195" key="GridCell.Tab.0.left" timestamp="1584802797876">
+    <state width="1493" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584841640751" />
+    <state width="1493" height="195" key="GridCell.Tab.0.left" timestamp="1584841640751">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1237" height="7" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1584781916379" />
-    <state width="1342" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584802797876" />
-    <state width="1342" height="195" key="GridCell.Tab.0.right" timestamp="1584802797876">
+    <state width="1493" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584841640751" />
+    <state width="1493" height="195" key="GridCell.Tab.0.right" timestamp="1584841640751">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1237" height="7" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1584781916379" />
-    <state width="1342" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584802797876" />
+    <state width="1493" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584841640751" />
     <state width="1237" height="290" key="GridCell.Tab.1.bottom" timestamp="1584673952382">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -274,9 +274,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Calculator$BinaryExpressionTest.ic" NAME="BinaryExpressionTest Coverage Results" MODIFIED="1584802797848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Calculator$BinaryExpressionTest.ic" NAME="BinaryExpressionTest Coverage Results" MODIFIED="1584841579663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>expression.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Calculator$Main.ic" NAME="Main Coverage Results" MODIFIED="1584802768356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Calculator$BinaryExpressionTest_testDivideExceptionMsg.ic" NAME="BinaryExpressionTest.testDivideExceptionMsg Coverage Results" MODIFIED="1584840438159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>expression.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Calculator$Main.ic" NAME="Main Coverage Results" MODIFIED="1584841572268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

@@ -32,6 +32,19 @@ public class UnaryExpressionTest {
 
     /**
      * Menguji method solve()
+     * pada NegativeExpression
+     */
+    @Test
+    public void solveNegativeTest3(){
+        Expression x = new SubstractExpression(new TerminalExpression(1.8), new TerminalExpression(-5.55));
+        utest = new NegativeExpression(x);
+        assertEquals(3.75, utest.solve(), 0.0001);
+    }
+
+
+
+    /**
+     * Menguji method solve()
      * pada SqrtExpression
      */
     @Test

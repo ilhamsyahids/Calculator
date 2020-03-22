@@ -49,4 +49,10 @@ public class BinaryExpressionTest {
         assertEquals(5.1, b.solve(), 0.0001);
     }
 
+    @Test
+    public void solveAddExpression2(){
+        b = new AddExpression(new TerminalExpression(4.0), (new NegativeExpression(new TerminalExpression(5.0))));
+        assertEquals(-1.0, b.solve(), 0.0001);
+    }
+
 }

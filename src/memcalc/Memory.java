@@ -19,13 +19,13 @@ public class Memory<T> {
     /**
      * Implementasi MC dan MR memanfaatkan struktur data Queue
     **/
-    private Queue<T> Buffer;
+    private Queue<T> buffer;
 
     /**
      * Constructor
      **/
     public Memory() {
-        this.Buffer = new LinkedList<T>();
+        this.buffer = new LinkedList<T>();
     }
 
     /**
@@ -34,7 +34,7 @@ public class Memory<T> {
      * @param entry : Hasil kalkulasi yang ingin dimasukkan
      */
     public void memorize(T entry) {
-        this.Buffer.add(entry);
+        this.buffer.add(entry);
     }
 
     /**
@@ -45,16 +45,16 @@ public class Memory<T> {
      * @return Hasil kalkulasi yang terdapat pada Head dari Queue
      */
     public T recall() {
-        if (this.Buffer.size() == 0) {
+        if (this.buffer.size() == 0) {
             throw new NoSuchElementException("Tidak ada data");
         }
-        return this.Buffer.remove();
+        return this.buffer.remove();
     }
 
     /**
      * Mengosongkan isi queue
      */
     public void clear() {
-        this.Buffer.clear();
+        this.buffer.clear();
     }
 }

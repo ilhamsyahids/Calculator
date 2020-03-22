@@ -8,7 +8,7 @@
 
 package expression;
 
-interface Expression {
+public interface Expression {
 	/**
 	 * Menghitung nilai dari ekspresi yang ada
 	 *

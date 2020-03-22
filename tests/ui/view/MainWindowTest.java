@@ -9,122 +9,122 @@ import static org.junit.Assert.*;
 public class MainWindowTest {
     private MainWindow MC = new MainWindow();
     @Test
-    public void getNumField() {
+    public void getNumFieldTest() {
         assertTrue(MC.getNumField() instanceof JTextField);
     }
     
     @Test
-    public void getErrorField() {
+    public void getErrorFieldTest() {
         assertTrue(MC.getErrorField() instanceof JTextField);
     }
     
     @Test
-    public void getLabel() {
+    public void getLabelTest() {
         assertTrue(MC.getLabel() instanceof JTextField);
     }
 
     @Test
-    public void getBtnDot() {
+    public void getBtnDotTest() {
         assertTrue(MC.getBtnDot() instanceof JButton);
     }
 
     @Test
-    public void getBtnZero() {
+    public void getBtnZeroTest() {
         assertTrue(MC.getBtnZero() instanceof JButton);
     }
 
     @Test
-    public void getBtnAns() {
+    public void getBtnAnsTest() {
         assertTrue(MC.getBtnAns() instanceof JButton);
     }
 
     @Test
-    public void getBtnPlus() {
+    public void getBtnPlusTest() {
         assertTrue(MC.getBtnPlus() instanceof JButton);
     }
 
     @Test
-    public void getBtnTwo() {
+    public void getBtnTwoTest() {
         assertTrue(MC.getBtnTwo() instanceof JButton);
     }
 
     @Test
-    public void getBtnSix() {
+    public void getBtnSixTest() {
         assertTrue(MC.getBtnSix() instanceof JButton);
     }
     
     @Test
-    public void getBtnMul() {
+    public void getBtnMulTest() {
         assertTrue(MC.getBtnMul() instanceof JButton);
     }
     
     @Test
-    public void getBtnMin() {
+    public void getBtnMinTest() {
         assertTrue(MC.getBtnMin() instanceof JButton);
     }
     
     @Test
-    public void getBtnDiv() {
+    public void getBtnDivTest() {
         assertTrue(MC.getBtnDiv() instanceof JButton);
     }
     
     @Test
-    public void getBtnEqu() {
+    public void getBtnEquTest() {
         assertTrue(MC.getBtnEqu() instanceof JButton);
     }
     
     @Test
-    public void getBtnOne() {
+    public void getBtnOneTest() {
         assertTrue(MC.getBtnOne() instanceof JButton);
     }
     
     @Test
-    public void getBtnThree() {
+    public void getBtnThreeTest() {
         assertTrue(MC.getBtnThree() instanceof JButton);
     }
     
     @Test
-    public void getBtnNine() {
+    public void getBtnNineTest() {
         assertTrue(MC.getBtnNine() instanceof JButton);
     }
     
     @Test
-    public void getBtnClear() {
+    public void getBtnClearTest() {
         assertTrue(MC.getBtnClear() instanceof JButton);
     }
     
     @Test
-    public void getBtnMemC() {
+    public void getBtnMemCTest() {
         assertTrue(MC.getBtnMemC() instanceof JButton);
     }
     
     @Test
-    public void getBtnSeven() {
+    public void getBtnSevenTest() {
         assertTrue(MC.getBtnSeven() instanceof JButton);
     }
     
     @Test
-    public void getBtnEight() {
+    public void getBtnEightTest() {
         assertTrue(MC.getBtnEight() instanceof JButton);
     }
     
     @Test
-    public void getBtnFour() {
+    public void getBtnFourTest() {
         assertTrue(MC.getBtnFour() instanceof JButton);
     }
     
     @Test
-    public void getBtnFive() {
+    public void getBtnFiveTest() {
         assertTrue(MC.getBtnFive() instanceof JButton);
     }
     
     @Test
-    public void getBtnMemR() {
+    public void getBtnMemRTest() {
         assertTrue(MC.getBtnMemR() instanceof JButton);
     }
     
     @Test
-    public void getBtnSquare() {
+    public void getBtnSquareTest() {
         assertTrue(MC.getBtnSquare() instanceof JButton);
     }
 }

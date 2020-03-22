@@ -14,7 +14,7 @@ public class MainWindowControllerTest {
     private MainWindowController MC = new MainWindowController(M);
 
     @Test
-    public void initComponents() {
+    public void initComponentsTest() {
         assertTrue(MC.getMainWindow() instanceof MainWindow);
         assertTrue(MC.getBtnZero() instanceof JButton);
         assertTrue(MC.getBtnOne() instanceof JButton);
@@ -49,47 +49,47 @@ public class MainWindowControllerTest {
     }
 
     @Test
-    public void setFirst() {
+    public void setFirstTest() {
         MC.setFirst(true);
         assertTrue(MC.isFirst());
     }
 
     @Test
-    public void getMainWindow() {
+    public void getMainWindowTest() {
         assertEquals(M, MC.getMainWindow());
     }
 
     @Test
-    public void getNumField() {
+    public void getNumFieldTest() {
         assertEquals(M.getNumField(), MC.getNumField());
     }
 
     @Test
-    public void getErrorField() {
+    public void getErrorFieldTest() {
         assertEquals(M.getErrorField(), MC.getErrorField());
     }
 
     @Test
-    public void getLabel() {
+    public void getLabelTest() {
         assertEquals(M.getLabel(), MC.getLabel());
     }
 
     @Test
-    public void getBtnOne() {
+    public void getBtnOneTest() {
         assertEquals(M.getBtnOne(), MC.getBtnOne());
         MC.getBtnOne().doClick();
         assertEquals("1", MC.getNumField().getText());
     }
 
     @Test
-    public void getBtnTwo() {
+    public void getBtnTwoTest() {
         assertEquals(M.getBtnTwo(), MC.getBtnTwo());
         MC.getBtnTwo().doClick();
         assertEquals("2", MC.getNumField().getText());
     }
 
     @Test
-    public void getBtnDot() {
+    public void getBtnDotTest() {
         assertEquals(M.getBtnDot(), MC.getBtnDot());
         MC.getBtnDot().doClick();
         assertEquals(".", MC.getNumField().getText());
@@ -98,17 +98,17 @@ public class MainWindowControllerTest {
     }
 
     @Test
-    public void getBtnZero() {
+    public void getBtnZeroTest() {
         assertEquals(M.getBtnZero(), MC.getBtnZero());
     }
 
     @Test
-    public void getBtnAns() {
+    public void getBtnAnsTest() {
         assertEquals(M.getBtnAns(), MC.getBtnAns());
     }
 
     @Test
-    public void getBtnPlus() {
+    public void getBtnPlusTest() {
         assertEquals(M.getBtnPlus(), MC.getBtnPlus());
         try {
             MC.getBtnPlus().doClick();
@@ -118,14 +118,14 @@ public class MainWindowControllerTest {
     }
 
     @Test
-    public void getBtnSix() {
+    public void getBtnSixTest() {
         assertEquals(M.getBtnSix(), MC.getBtnSix());
         MC.getBtnSix().doClick();
         assertEquals("6", MC.getNumField().getText());
     }
 
     @Test
-    public void getBtnMul() {
+    public void getBtnMulTest() {
         assertEquals(M.getBtnMul(), MC.getBtnMul());
         try {
             MC.getBtnMul().doClick();
@@ -135,7 +135,7 @@ public class MainWindowControllerTest {
     }
 
     @Test
-    public void getBtnMin() {
+    public void getBtnMinTest() {
         assertEquals(M.getBtnMin(), MC.getBtnMin());
         try {
             MC.getBtnMin().doClick();
@@ -145,7 +145,7 @@ public class MainWindowControllerTest {
     }
 
     @Test
-    public void getBtnDiv() {
+    public void getBtnDivTest() {
         assertEquals(M.getBtnDiv(), MC.getBtnDiv());
         try {
             MC.getBtnDiv().doClick();
@@ -155,7 +155,7 @@ public class MainWindowControllerTest {
     }
 
     @Test
-    public void getBtnEqu() {
+    public void getBtnEquTest() {
         assertEquals(M.getBtnEqu(), MC.getBtnEqu());
         try {
             MC.getBtnEqu().doClick();
@@ -165,21 +165,21 @@ public class MainWindowControllerTest {
     }
 
     @Test
-    public void getBtnThree() {
+    public void getBtnThreeTest() {
         assertEquals(M.getBtnThree(), MC.getBtnThree());
         MC.getBtnThree().doClick();
         assertEquals("3", MC.getNumField().getText());
     }
 
     @Test
-    public void getBtnNine() {
+    public void getBtnNineTest() {
         assertEquals(M.getBtnNine(), MC.getBtnNine());
         MC.getBtnNine().doClick();
         assertEquals("9", MC.getNumField().getText());
     }
 
     @Test
-    public void getBtnClear() {
+    public void getBtnClearTest() {
         assertEquals(M.getBtnClear(), MC.getBtnClear());
         try {
             MC.getBtnClear().doClick();
@@ -189,7 +189,7 @@ public class MainWindowControllerTest {
     }
 
     @Test
-    public void getBtnMemC() {
+    public void getBtnMemCTest() {
         assertEquals(M.getBtnMemC(), MC.getBtnMemC());
     }
 
@@ -201,28 +201,28 @@ public class MainWindowControllerTest {
     }
 
     @Test
-    public void getBtnEight() {
+    public void getBtnEightTest() {
         assertEquals(M.getBtnEight(), MC.getBtnEight());
         MC.getBtnEight().doClick();
         assertEquals("8", MC.getNumField().getText());
     }
 
     @Test
-    public void getBtnFour() {
+    public void getBtnFourTest() {
         assertEquals(M.getBtnFour(), MC.getBtnFour());
         MC.getBtnFour().doClick();
         assertEquals("4", MC.getNumField().getText());
     }
 
     @Test
-    public void getBtnFive() {
+    public void getBtnFiveTest() {
         assertEquals(M.getBtnFive(), MC.getBtnFive());
         MC.getBtnFive().doClick();
         assertEquals("5", MC.getNumField().getText());
     }
 
     @Test
-    public void getBtnMemR() {
+    public void getBtnMemRTest() {
         assertEquals(M.getBtnMemR(), MC.getBtnMemR());
         try {
             MC.getBtnMemR().doClick();
@@ -232,7 +232,7 @@ public class MainWindowControllerTest {
     }
 
     @Test
-    public void getBtnSquare() {
+    public void getBtnSquareTest() {
         assertEquals(M.getBtnSquare(), MC.getBtnSquare());
         MC.getBtnSquare().doClick();
         assertEquals("√", MC.getLabel().getText());

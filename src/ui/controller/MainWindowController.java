@@ -530,28 +530,29 @@ public class MainWindowController {
         @Override
         public void actionPerformed(ActionEvent e) {
             try {
+                Expression solveExp;
                 if (numField.getText() == "") throw new Exception("Tidak ada angka");
                 TerminalExpression firstNum = new TerminalExpression(Double.parseDouble(numField.getText()));
                 switch (typeExp) {
                     case 1:
-                        MultiplyExpression mul = new MultiplyExpression(Exp, firstNum);
-                        Exp = new TerminalExpression(mul.solve());
+                        solveExp = new MultiplyExpression(Exp, firstNum);
+                        Exp = new TerminalExpression(solveExp.solve());
                         break;
                     case 2:
-                        DivideExpression div = new DivideExpression(Exp, firstNum);
-                        Exp = new TerminalExpression(div.solve());
+                        solveExp = new DivideExpression(Exp, firstNum);
+                        Exp = new TerminalExpression(solveExp.solve());
                         break;
                     case 3:
-                        AddExpression add = new AddExpression(Exp, firstNum);
-                        Exp = new TerminalExpression(add.solve());
+                        solveExp = new AddExpression(Exp, firstNum);
+                        Exp = new TerminalExpression(solveExp.solve());
                         break;
                     case 4:
-                        SubstractExpression sub = new SubstractExpression (Exp, firstNum);
-                        Exp = new TerminalExpression(sub.solve());
+                        solveExp = new SubstractExpression (Exp, firstNum);
+                        Exp = new TerminalExpression(solveExp.solve());
                         break;
                     case 5:
-                        SqrtExpression sqrt = new SqrtExpression(firstNum);
-                        Exp = new TerminalExpression(sqrt.solve());
+                        solveExp = new SqrtExpression(firstNum);
+                        Exp = new TerminalExpression(solveExp.solve());
                         break;
                     default:
                         Exp = firstNum;

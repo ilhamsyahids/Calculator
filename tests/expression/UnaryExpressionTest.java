@@ -73,7 +73,7 @@ public class UnaryExpressionTest {
      * pada SqrtExpression
      */
     @Test(expected=ArithmeticException.class)
-    public void solveSqrtException() {
+    public void testSqrtException() {
         utest = new SqrtExpression(new TerminalExpression(-3.0));
         utest.solve();
     }

@@ -6,6 +6,10 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import java.util.NoSuchElementException;
 
+/**
+ * File: MemoryTest.java
+ * Unit testing untuk method pada class Memory
+ */
 public class MemoryTest {
 
     private Memory<Double> m;

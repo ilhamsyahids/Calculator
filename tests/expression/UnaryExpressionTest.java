@@ -5,6 +5,10 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+/**
+ * File: UnaryExpressionTest.java
+ * Unit testing pada class UnaryExpression
+ */
 public class UnaryExpressionTest {
 
     private UnaryExpression utest;
@@ -38,7 +42,7 @@ public class UnaryExpressionTest {
     public void solveNegativeTest3(){
         Expression x = new SubstractExpression(new TerminalExpression(1.8), new TerminalExpression(-5.55));
         utest = new NegativeExpression(x);
-        assertEquals(3.75, utest.solve(), 0.0001);
+        assertEquals(-7.35, utest.solve(), 0.0001);
     }
 
 
@@ -72,5 +76,19 @@ public class UnaryExpressionTest {
     public void solveSqrtException() {
         utest = new SqrtExpression(new TerminalExpression(-3.0));
         utest.solve();
+    }
+
+    /**
+     * Menguji exception handling
+     * pada SqrtExpression
+     */
+    @Test
+    public void testSqrtExceptionMsg() {
+        try {
+            utest = new SqrtExpression(new TerminalExpression(-1.35));
+            utest.solve();
+        } catch(Exception ex) {
+            assertEquals("Error: imajiner", ex.getMessage());
+        }
     }
 }

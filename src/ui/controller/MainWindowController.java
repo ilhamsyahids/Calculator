@@ -8,7 +8,14 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * File: MainWindowController.java
+ * Program Controller untuk GUI yang digunakan
+ */
+
 public class MainWindowController {
+
+    // Komponen GUI Calculator
     private MainWindow mainWindow;
     private JTextField numField;
     private JTextField errorField;
@@ -35,11 +42,13 @@ public class MainWindowController {
     private JButton btnMemR;
     private JButton btnSquare;
 
+    //Komponen untuk kalkulasi pada GUI
     private TerminalExpression Exp;
     private Double ans;
     private boolean first;
     private int typeExp;
     private Memory<Double> memo;
+    private boolean justAnswered;
 
     public MainWindowController() {
         initComponents();
@@ -52,6 +61,7 @@ public class MainWindowController {
         first = true;
         Exp = new TerminalExpression(0.0);
         memo = new Memory<Double>();
+        justAnswered = false;
 
         mainWindow = new MainWindow();
         btnOne = mainWindow.getBtnOne();
@@ -120,6 +130,7 @@ public class MainWindowController {
     private class DotBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
+            resetJustAnswered();
             numField.setText(numField.getText() + '.');
         }
     }
@@ -127,6 +138,7 @@ public class MainWindowController {
     private class OneBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
+            resetJustAnswered();
             numField.setText(numField.getText() + '1');
         }
     }
@@ -134,6 +146,7 @@ public class MainWindowController {
     private class TwoBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
+            resetJustAnswered();
             numField.setText(numField.getText() + '2');
         }
     }
@@ -141,6 +154,7 @@ public class MainWindowController {
     private class ThreeBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
+            resetJustAnswered();
             numField.setText(numField.getText() + '3');
         }
     }
@@ -148,6 +162,7 @@ public class MainWindowController {
     private class FourBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
+            resetJustAnswered();
             numField.setText(numField.getText() + '4');
         }
     }
@@ -155,6 +170,7 @@ public class MainWindowController {
     private class FiveBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
+            resetJustAnswered();
             numField.setText(numField.getText() + '5');
         }
     }
@@ -162,6 +178,7 @@ public class MainWindowController {
     private class SixBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
+            resetJustAnswered();
             numField.setText(numField.getText() + '6');
         }
     }
@@ -169,6 +186,7 @@ public class MainWindowController {
     private class SevenBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
+            resetJustAnswered();
             numField.setText(numField.getText() + '7');
         }
     }
@@ -176,6 +194,7 @@ public class MainWindowController {
     private class EightBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
+            resetJustAnswered();
             numField.setText(numField.getText() + '8');
         }
     }
@@ -183,6 +202,7 @@ public class MainWindowController {
     private class NineBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
+            resetJustAnswered();
             numField.setText(numField.getText() + '9');
         }
     }
@@ -243,7 +263,6 @@ public class MainWindowController {
     private class EquBtnListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            //TerminalExpression firstNum = new TerminalExpression(Double.parseDouble(numField.getText()));
             try {
                 TerminalExpression firstNum = new TerminalExpression(Double.parseDouble(numField.getText()));
                 switch (typeExp) {
@@ -281,6 +300,7 @@ public class MainWindowController {
                 clearError();
                 typeExp = 0;
                 first = true;
+                justAnswered = true;
             } catch (Exception ex) {
                 errorField.setText(ex.getMessage());
                 numField.setText("");
@@ -388,6 +408,7 @@ public class MainWindowController {
         @Override
         public void actionPerformed(ActionEvent e) {
             try {
+                resetJustAnswered();
                 label.setText("√");
                 typeExp = 5;
             } catch (Exception e1) {
@@ -396,10 +417,18 @@ public class MainWindowController {
         }
     }
 
+    private void resetJustAnswered() {
+        if(justAnswered) {
+            justAnswered = false;
+            numField.setText("");
+        }
+    }
+
     private void resetAtt() {
         typeExp = 0;
         ans = 0.0;
         first = true;
+        justAnswered = false;
         Exp = new TerminalExpression(0.0);
         memo.clear();
     }

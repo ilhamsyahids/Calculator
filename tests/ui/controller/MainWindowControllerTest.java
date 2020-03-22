@@ -77,16 +77,24 @@ public class MainWindowControllerTest {
     @Test
     public void getBtnOne() {
         assertEquals(M.getBtnOne(), MC.getBtnOne());
+        MC.getBtnOne().doClick();
+        assertEquals("1", MC.getNumField().getText());
     }
 
     @Test
     public void getBtnTwo() {
         assertEquals(M.getBtnTwo(), MC.getBtnTwo());
+        MC.getBtnTwo().doClick();
+        assertEquals("2", MC.getNumField().getText());
     }
 
     @Test
     public void getBtnDot() {
         assertEquals(M.getBtnDot(), MC.getBtnDot());
+        MC.getBtnDot().doClick();
+        assertEquals(".", MC.getNumField().getText());
+        MC.getBtnDot().doClick();
+        assertEquals("..", MC.getNumField().getText());
     }
 
     @Test
@@ -102,46 +110,82 @@ public class MainWindowControllerTest {
     @Test
     public void getBtnPlus() {
         assertEquals(M.getBtnPlus(), MC.getBtnPlus());
+        try {
+            MC.getBtnPlus().doClick();
+        } catch (Exception e) {
+            assertEquals("Tidak ada angka", MC.getErrorField().getText());
+        }
     }
 
     @Test
     public void getBtnSix() {
         assertEquals(M.getBtnSix(), MC.getBtnSix());
+        MC.getBtnSix().doClick();
+        assertEquals("6", MC.getNumField().getText());
     }
 
     @Test
     public void getBtnMul() {
         assertEquals(M.getBtnMul(), MC.getBtnMul());
+        try {
+            MC.getBtnMul().doClick();
+        } catch (Exception e) {
+            assertEquals("Tidak ada angka", MC.getErrorField().getText());
+        }
     }
 
     @Test
     public void getBtnMin() {
         assertEquals(M.getBtnMin(), MC.getBtnMin());
+        try {
+            MC.getBtnMin().doClick();
+        } catch (Exception e) {
+            assertEquals("Tidak ada angka", MC.getErrorField().getText());
+        }
     }
 
     @Test
     public void getBtnDiv() {
         assertEquals(M.getBtnDiv(), MC.getBtnDiv());
+        try {
+            MC.getBtnDiv().doClick();
+        } catch (Exception e) {
+            assertEquals("Tidak ada angka", MC.getErrorField().getText());
+        }
     }
 
     @Test
     public void getBtnEqu() {
         assertEquals(M.getBtnEqu(), MC.getBtnEqu());
+        try {
+            MC.getBtnEqu().doClick();
+        } catch (Exception e) {
+            assertEquals("Tidak ada angka", MC.getErrorField().getText());
+        }
     }
 
     @Test
     public void getBtnThree() {
         assertEquals(M.getBtnThree(), MC.getBtnThree());
+        MC.getBtnThree().doClick();
+        assertEquals("3", MC.getNumField().getText());
     }
 
     @Test
     public void getBtnNine() {
         assertEquals(M.getBtnNine(), MC.getBtnNine());
+        MC.getBtnNine().doClick();
+        assertEquals("9", MC.getNumField().getText());
     }
 
     @Test
     public void getBtnClear() {
         assertEquals(M.getBtnClear(), MC.getBtnClear());
+        try {
+            MC.getBtnClear().doClick();
+        } catch (Exception e) {
+            assertEquals("Tidak ada angka", MC.getErrorField().getText());
+        }
     }
 
     @Test
@@ -152,30 +196,45 @@ public class MainWindowControllerTest {
     @Test
     public void getBtnSeven() {
         assertEquals(M.getBtnSeven(), MC.getBtnSeven());
+        MC.getBtnSeven().doClick();
+        assertEquals("7", MC.getNumField().getText());
     }
 
     @Test
     public void getBtnEight() {
         assertEquals(M.getBtnEight(), MC.getBtnEight());
+        MC.getBtnEight().doClick();
+        assertEquals("8", MC.getNumField().getText());
     }
 
     @Test
     public void getBtnFour() {
         assertEquals(M.getBtnFour(), MC.getBtnFour());
+        MC.getBtnFour().doClick();
+        assertEquals("4", MC.getNumField().getText());
     }
 
     @Test
     public void getBtnFive() {
         assertEquals(M.getBtnFive(), MC.getBtnFive());
+        MC.getBtnFive().doClick();
+        assertEquals("5", MC.getNumField().getText());
     }
 
     @Test
     public void getBtnMemR() {
         assertEquals(M.getBtnMemR(), MC.getBtnMemR());
+        try {
+            MC.getBtnMemR().doClick();
+        } catch (Exception e) {
+            assertEquals("Tidak ada data", MC.getErrorField().getText());
+        }
     }
 
     @Test
     public void getBtnSquare() {
         assertEquals(M.getBtnSquare(), MC.getBtnSquare());
+        MC.getBtnSquare().doClick();
+        assertEquals("√", MC.getLabel().getText());
     }
 }

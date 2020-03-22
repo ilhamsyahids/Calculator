@@ -530,6 +530,7 @@ public class MainWindowController {
         @Override
         public void actionPerformed(ActionEvent e) {
             try {
+                if (numField.getText() == "") throw new Exception("Tidak ada angka");
                 TerminalExpression firstNum = new TerminalExpression(Double.parseDouble(numField.getText()));
                 switch (typeExp) {
                     case 1:

@@ -44,7 +44,7 @@ public class BinaryExpressionTest {
             b = new DivideExpression(new TerminalExpression(1.0), new TerminalExpression(0.0));
             b.solve();
         } catch(Exception e) {
-            assertEquals(e.getMessage(), "Error: Pembagi Nol");
+            assertEquals(e.getMessage(), "Error: Penyebut Nol");
         }
     }
 

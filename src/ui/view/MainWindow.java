@@ -22,7 +22,7 @@ public class MainWindow extends JFrame{
     private JButton btnClear;
     private JButton btnMemC;
     private JButton btnSeven;
-    private JButton banEight;
+    private JButton btnEight;
     private JButton btnFour;
     private JButton btnFive;
     private JButton btnMemR;
@@ -112,8 +112,8 @@ public class MainWindow extends JFrame{
         return btnSeven;
     }
 
-    public JButton getBanEight() {
-        return banEight;
+    public JButton getBtnEight() {
+        return btnEight;
     }
 
     public JButton getBtnFour() {

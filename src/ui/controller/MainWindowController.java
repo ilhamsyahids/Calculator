@@ -15,7 +15,7 @@ import java.awt.event.ActionListener;
 
 public class MainWindowController {
 
-    // Komponen GUI Calculator
+    // Components GUI Calculator
     private MainWindow mainWindow;
     private JTextField numField;
     private JTextField errorField;
@@ -50,46 +50,61 @@ public class MainWindowController {
     private Memory<Double> memo;
     private boolean justAnswered;
 
+    /**
+     * Constructors
+     */
     public MainWindowController() {
-        initComponents();
+        initComponents(new MainWindow());
         initListeners();
     }
 
-    public void initComponents() {
-        typeExp = 0;
-        ans = 0.0;
-        first = true;
-        Exp = new TerminalExpression(0.0);
-        memo = new Memory<Double>();
-        justAnswered = false;
-
-        mainWindow = new MainWindow();
-        btnOne = mainWindow.getBtnOne();
-        btnTwo = mainWindow.getBtnTwo();
-        btnThree = mainWindow.getBtnThree();
-        btnFour = mainWindow.getBtnFour();
-        btnFive = mainWindow.getBtnFive();
-        btnSix = mainWindow.getBtnSix();
-        btnSeven = mainWindow.getBtnSeven();
-        btnEight = mainWindow.getBanEight();
-        btnNine = mainWindow.getBtnNine();
-        btnZero = mainWindow.getBtnZero();
-        btnDot = mainWindow.getBtnDot();
-        btnPlus = mainWindow.getBtnPlus();
-        btnMin = mainWindow.getBtnMin();
-        btnMul = mainWindow.getBtnMul();
-        btnDiv = mainWindow.getBtnDiv();
-        btnSquare = mainWindow.getBtnSquare();
-        btnClear = mainWindow.getBtnClear();
-        btnAns = mainWindow.getBtnAns();
-        btnEqu = mainWindow.getBtnEqu();
-        btnMemC = mainWindow.getBtnMemC();
-        btnMemR = mainWindow.getBtnMemR();
-        numField = mainWindow.getNumField();
-        errorField = mainWindow.getErrorField();
-        label = mainWindow.getLabel();
+    public MainWindowController(MainWindow mainWindow) {
+        this.mainWindow = mainWindow;
+        initComponents(mainWindow);
+        initListeners();
     }
 
+    /**
+     * Init property to pointer components
+     */
+    public void initComponents(MainWindow mainWindow) {
+        setTypeExp(0);
+        setAns(0.0);
+        setFirst(true);
+        setExp(new TerminalExpression(0.0));
+        setMemo(new Memory<>());
+        setJustAnswered(false);
+
+        setMainWindow(mainWindow);
+        setBtnAns(mainWindow.getBtnAns());
+        setBtnClear(mainWindow.getBtnClear());
+        setBtnDiv(mainWindow.getBtnDiv());
+        setBtnDot(mainWindow.getBtnDot());
+        setBtnEqu(mainWindow.getBtnEqu());
+        setBtnMemC(mainWindow.getBtnMemC());
+        setBtnMemR(mainWindow.getBtnMemR());
+        setBtnMin(mainWindow.getBtnMin());
+        setBtnMul(mainWindow.getBtnMul());
+        setBtnPlus(mainWindow.getBtnPlus());
+        setErrorField(mainWindow.getErrorField());
+        setBtnSquare(mainWindow.getBtnSquare());
+        setLabel(mainWindow.getLabel());
+        setNumField(mainWindow.getNumField());
+        setBtnZero(mainWindow.getBtnZero());
+        setBtnOne(mainWindow.getBtnOne());
+        setBtnTwo(mainWindow.getBtnTwo());
+        setBtnThree(mainWindow.getBtnThree());
+        setBtnFour(mainWindow.getBtnFour());
+        setBtnFive(mainWindow.getBtnFive());
+        setBtnSix(mainWindow.getBtnSix());
+        setBtnSeven(mainWindow.getBtnSeven());
+        setBtnEight(mainWindow.getBtnEight());
+        setBtnNine(mainWindow.getBtnNine());
+    }
+
+    /**
+     * Init listeners to button or field
+     */
     private void initListeners() {
         btnDot.addActionListener(new DotBtnListener());
         btnOne.addActionListener(new OneBtnListener());
@@ -114,6 +129,257 @@ public class MainWindowController {
         btnSquare.addActionListener(new SquareBtnListener());
     }
 
+    public TerminalExpression getExp() {
+        return Exp;
+    }
+
+    public void setExp(TerminalExpression exp) {
+        Exp = exp;
+    }
+
+    public Double getAns() {
+        return ans;
+    }
+
+    public void setAns(Double ans) {
+        this.ans = ans;
+    }
+
+    public boolean isFirst() {
+        return first;
+    }
+
+    public void setFirst(boolean first) {
+        this.first = first;
+    }
+
+    public int getTypeExp() {
+        return typeExp;
+    }
+
+    public void setTypeExp(int typeExp) {
+        this.typeExp = typeExp;
+    }
+
+    public Memory<Double> getMemo() {
+        return memo;
+    }
+
+    public void setMemo(Memory<Double> memo) {
+        this.memo = memo;
+    }
+
+    public boolean isJustAnswered() {
+        return justAnswered;
+    }
+
+    public void setJustAnswered(boolean justAnswered) {
+        this.justAnswered = justAnswered;
+    }
+
+    public MainWindow getMainWindow() {
+        return mainWindow;
+    }
+
+    public void setMainWindow(MainWindow mainWindow) {
+        this.mainWindow = mainWindow;
+    }
+
+    public JTextField getNumField() {
+        return numField;
+    }
+
+    public void setNumField(JTextField numField) {
+        this.numField = numField;
+    }
+
+    public JTextField getErrorField() {
+        return errorField;
+    }
+
+    public void setErrorField(JTextField errorField) {
+        this.errorField = errorField;
+    }
+
+    public JTextField getLabel() {
+        return label;
+    }
+
+    public void setLabel(JTextField label) {
+        this.label = label;
+    }
+
+    public JButton getBtnOne() {
+        return btnOne;
+    }
+
+    public void setBtnOne(JButton btnOne) {
+        this.btnOne = btnOne;
+    }
+
+    public JButton getBtnTwo() {
+        return btnTwo;
+    }
+
+    public void setBtnTwo(JButton btnTwo) {
+        this.btnTwo = btnTwo;
+    }
+
+    public JButton getBtnDot() {
+        return btnDot;
+    }
+
+    public void setBtnDot(JButton btnDot) {
+        this.btnDot = btnDot;
+    }
+
+    public JButton getBtnZero() {
+        return btnZero;
+    }
+
+    public void setBtnZero(JButton btnZero) {
+        this.btnZero = btnZero;
+    }
+
+    public JButton getBtnAns() {
+        return btnAns;
+    }
+
+    public void setBtnAns(JButton btnAns) {
+        this.btnAns = btnAns;
+    }
+
+    public JButton getBtnPlus() {
+        return btnPlus;
+    }
+
+    public void setBtnPlus(JButton btnPlus) {
+        this.btnPlus = btnPlus;
+    }
+
+    public JButton getBtnSix() {
+        return btnSix;
+    }
+
+    public void setBtnSix(JButton btnSix) {
+        this.btnSix = btnSix;
+    }
+
+    public JButton getBtnMul() {
+        return btnMul;
+    }
+
+    public void setBtnMul(JButton btnMul) {
+        this.btnMul = btnMul;
+    }
+
+    public JButton getBtnMin() {
+        return btnMin;
+    }
+
+    public void setBtnMin(JButton btnMin) {
+        this.btnMin = btnMin;
+    }
+
+    public JButton getBtnDiv() {
+        return btnDiv;
+    }
+
+    public void setBtnDiv(JButton btnDiv) {
+        this.btnDiv = btnDiv;
+    }
+
+    public JButton getBtnEqu() {
+        return btnEqu;
+    }
+
+    public void setBtnEqu(JButton btnEqu) {
+        this.btnEqu = btnEqu;
+    }
+
+    public JButton getBtnThree() {
+        return btnThree;
+    }
+
+    public void setBtnThree(JButton btnThree) {
+        this.btnThree = btnThree;
+    }
+
+    public JButton getBtnNine() {
+        return btnNine;
+    }
+
+    public void setBtnNine(JButton btnNine) {
+        this.btnNine = btnNine;
+    }
+
+    public JButton getBtnClear() {
+        return btnClear;
+    }
+
+    public void setBtnClear(JButton btnClear) {
+        this.btnClear = btnClear;
+    }
+
+    public JButton getBtnMemC() {
+        return btnMemC;
+    }
+
+    public void setBtnMemC(JButton btnMemC) {
+        this.btnMemC = btnMemC;
+    }
+
+    public JButton getBtnSeven() {
+        return btnSeven;
+    }
+
+    public void setBtnSeven(JButton btnSeven) {
+        this.btnSeven = btnSeven;
+    }
+
+    public JButton getBtnEight() {
+        return btnEight;
+    }
+
+    public void setBtnEight(JButton btnEight) {
+        this.btnEight = btnEight;
+    }
+
+    public JButton getBtnFour() {
+        return btnFour;
+    }
+
+    public void setBtnFour(JButton btnFour) {
+        this.btnFour = btnFour;
+    }
+
+    public JButton getBtnFive() {
+        return btnFive;
+    }
+
+    public void setBtnFive(JButton btnFive) {
+        this.btnFive = btnFive;
+    }
+
+    public JButton getBtnMemR() {
+        return btnMemR;
+    }
+
+    public void setBtnMemR(JButton btnMemR) {
+        this.btnMemR = btnMemR;
+    }
+
+    public JButton getBtnSquare() {
+        return btnSquare;
+    }
+
+    public void setBtnSquare(JButton btnSquare) {
+        this.btnSquare = btnSquare;
+    }
+
+    /**
+     * Show the window
+     */
     public void showWindow() {
         mainWindow.setVisible(true);
     }

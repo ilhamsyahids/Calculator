@@ -698,7 +698,7 @@ public class MainWindowController {
     private void resetJustAnswered() {
         if(justAnswered) {
             justAnswered = false;
-            numField.setText("");
+            if (numField.getText() != "-") numField.setText("");
         }
     }
 

@@ -29,11 +29,17 @@ public class MainWindow extends JFrame{
     private JButton btnSquare;
     private JPanel mainPanel;
 
+    private JButton btnClearNum;
+
     public MainWindow() {
         setSize(350, 400);
         setContentPane(mainPanel);
         setLocationRelativeTo(null);
         setResizable(false);
+    }
+
+    public JButton getBtnClearNum() {
+        return btnClearNum;
     }
 
     public JTextField getNumField() {

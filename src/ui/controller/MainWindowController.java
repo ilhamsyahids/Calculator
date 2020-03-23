@@ -41,6 +41,7 @@ public class MainWindowController {
     private JButton btnFive;
     private JButton btnMemR;
     private JButton btnSquare;
+    private JButton btnClearNum;
 
     //Komponen untuk kalkulasi pada GUI
     private TerminalExpression Exp;
@@ -100,6 +101,7 @@ public class MainWindowController {
         setBtnSeven(mainWindow.getBtnSeven());
         setBtnEight(mainWindow.getBtnEight());
         setBtnNine(mainWindow.getBtnNine());
+        setBtnClearNum(mainWindow.getBtnClearNum());
     }
 
     /**
@@ -127,6 +129,15 @@ public class MainWindowController {
         btnPlus.addActionListener(new PlusBtnListener());
         btnMin.addActionListener(new MinBtnListener());
         btnSquare.addActionListener(new SquareBtnListener());
+        btnClearNum.addActionListener(new ClearNumListener());
+    }
+
+    public JButton getBtnClearNum() {
+        return btnClearNum;
+    }
+
+    public void setBtnClearNum(JButton btnClearNum) {
+        this.btnClearNum = btnClearNum;
     }
 
     public TerminalExpression getExp() {
@@ -708,5 +719,12 @@ public class MainWindowController {
 
     private void clearError() {
         errorField.setText("");
+    }
+
+    private class ClearNumListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            numField.setText("");
+        }
     }
 }
